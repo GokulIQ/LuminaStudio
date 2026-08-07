@@ -131,6 +131,21 @@ body.dark-mode {
 
   --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
   --gradient-text: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #818cf8 100%);
+
+  /* Keep Bootstrap utility classes aligned with the Lumina dark palette. */
+  --bs-body-bg: #06090e;
+  --bs-body-bg-rgb: 6, 9, 14;
+  --bs-body-color: #cbd5e1;
+  --bs-body-color-rgb: 203, 213, 225;
+  --bs-emphasis-color: #f8fafc;
+  --bs-emphasis-color-rgb: 248, 250, 252;
+  --bs-secondary-color: #94a3b8;
+  --bs-secondary-color-rgb: 148, 163, 184;
+  --bs-tertiary-bg: #0f172a;
+  --bs-tertiary-bg-rgb: 15, 23, 42;
+  --bs-card-bg: #0b0f19;
+  --bs-card-color: #cbd5e1;
+  --bs-border-color: rgba(255, 255, 255, 0.1);
 }
 
 /* ==========================================================================
@@ -158,6 +173,28 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 100%;
+}
+
+/* In dark mode, preserve Bootstrap's white text utilities while changing
+   only the light background utility surfaces to the Lumina dark palette. */
+[data-theme="dark"] .bg-light,
+[data-bs-theme="dark"] .bg-light,
+body.dark-mode .bg-light {
+  background-color: var(--bg-subtle) !important;
+}
+
+[data-theme="dark"] .bg-white,
+[data-bs-theme="dark"] .bg-white,
+body.dark-mode .bg-white {
+  background-color: var(--bg-surface-elevated) !important;
+}
+
+.portfolio-overlay .text-white {
+  color: #ffffff !important;
+}
+
+.portfolio-overlay .text-white-50 {
+  color: rgba(255, 255, 255, 0.78) !important;
 }
 
 /* Top Scroll Reading Progress Indicator */
@@ -1020,6 +1057,49 @@ section,
   margin-top: 0 !important;
   width: 100%;
   max-width: 100%;
+}
+
+/* About page: explicit theme surfaces prevent Bootstrap light utilities from
+   producing pale sections when the dark theme is active. */
+.about-page,
+.about-page main {
+  background-color: var(--bg-body);
+}
+
+.about-page .hero-section {
+  background: var(--bg-body);
+}
+
+.about-page .bg-surface {
+  background-color: var(--bg-surface) !important;
+}
+
+[data-theme="dark"] .about-page .bg-light,
+[data-bs-theme="dark"] .about-page .bg-light,
+body.dark-mode.about-page .bg-light {
+  background-color: var(--bg-subtle) !important;
+}
+
+[data-theme="dark"] .about-page .bg-white,
+[data-bs-theme="dark"] .about-page .bg-white,
+body.dark-mode.about-page .bg-white {
+  background-color: var(--bg-surface-elevated) !important;
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .about-page .btn-light,
+[data-bs-theme="dark"] .about-page .btn-light,
+body.dark-mode.about-page .btn-light {
+  background-color: var(--bg-surface-elevated);
+  border-color: var(--border-glass);
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .about-page .btn-outline-dark,
+[data-bs-theme="dark"] .about-page .btn-outline-dark,
+body.dark-mode.about-page .btn-outline-dark {
+  border-color: var(--border-focus);
+  color: var(--text-primary);
 }
 
 .page-banner {
