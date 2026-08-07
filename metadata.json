@@ -1,0 +1,6 @@
+{
+  "name": "LuminaStudio",
+  "description": "Commercial Grade Luxury Photography & Biometric Passport Studio Website",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

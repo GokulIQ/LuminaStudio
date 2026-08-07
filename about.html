@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LuminaStudio - Premium Photography Studio and Certified Biometric Passport & Visa Photo Service. Instant acceptance guaranteed.">
+  <meta name="keywords" content="photo studio, passport photo, visa photo, headshots, wedding photography, portrait studio, retouching">
+  <meta name="author" content="LuminaThemes">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="LuminaStudio - Premium Photography & Certified Passport Photos">
+  <meta property="og:description" content="Capture your moments with master lighting and get 100% government-compliant biometric passport photos.">
+  
+  <title>About Us | LuminaStudio Photography</title>
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+
+  <!-- Immediate Theme Initializer (Prevents FOUC / Dark Mode Flash) -->
+  <script>
+    (function() {
+      try {
+        var saved = window.location.protocol === 'file:' ? null : localStorage.getItem('lumina_theme');
+        var theme = saved || 'light';
+        var html = document.documentElement;
+        html.setAttribute('data-bs-theme', theme);
+        html.setAttribute('data-theme', theme);
+        if (theme === 'dark') document.documentElement.classList.add('dark-mode-pending');
+      } catch(e) {}
+    })();
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  
+  <!-- FontAwesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- AOS Animation CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+  <!-- SwiperJS CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+  <!-- Core Theme Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  
+  <!-- RTL Layout Support -->
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <!-- Top Scroll Reading Progress Line -->
+  <div class="scroll-progress-bar"></div>
+
+  <!-- Ambient Glow Background Blobs -->
+  <div class="ambient-glow-wrapper">
+    <div class="ambient-blob blob-primary"></div>
+    <div class="ambient-blob blob-accent"></div>
+    <div class="ambient-blob blob-secondary"></div>
+  </div>
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-glass-container d-flex align-items-center justify-content-between flex-nowrap">
+        
+        <!-- Brand Logo -->
+        <a href="index.html" class="brand-logo text-decoration-none flex-shrink-0">
+          <div class="brand-icon">
+            <i class="fa-solid fa-camera-retro"></i>
+          </div>
+          <span>Lumina<span class="accent">Studio</span></span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="navbar navbar-expand-lg p-0 d-none d-lg-flex flex-grow-1 justify-content-center px-lg-4">
+          <ul class="navbar-nav align-items-center">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+              </a>
+              <ul class="dropdown-menu dropdown-menu-glass">
+                <li><a class="dropdown-item active" href="index.html"><i class="fa-solid fa-house-chimney"></i> Home 1 - Classic Studio</a></li>
+                <li><a class="dropdown-item" href="home-2.html"><i class="fa-solid fa-wand-magic-sparkles"></i> Home 2 - SaaS</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="about.html">About Us</a>
+            </li>
+            
+            <!-- Mega Menu: Services -->
+            <li class="nav-item dropdown position-static">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Services
+              </a>
+              <div class="dropdown-menu dropdown-menu-glass mega-menu-container start-50 translate-middle-x">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <h6 class="fw-bold text-primary mb-3"><i class="fa-solid fa-passport me-2"></i>Biometric & Official</h6>
+                    <a href="service-details.html" class="mega-service-item text-decoration-none text-reset">
+                      <div class="mega-service-icon"><i class="fa-solid fa-id-card"></i></div>
+                      <div>
+                        <div class="fw-bold text-primary">Passport & Visa Photos</div>
+                        <small class="text-muted">US, UK, Schengen & 100+ countries with biometric compliance guarantee.</small>
+                      </div>
+                    </a>
+                    <a href="service-portrait.html" class="mega-service-item text-decoration-none text-reset mt-2">
+                      <div class="mega-service-icon"><i class="fa-solid fa-user-tie"></i></div>
+                      <div>
+                        <div class="fw-bold text-primary">Executive Headshots</div>
+                        <small class="text-muted">High-impact portraits for LinkedIn, speaking, and corporate leadership.</small>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-6">
+                    <h6 class="fw-bold text-secondary mb-3"><i class="fa-solid fa-film me-2"></i>Creative & Events</h6>
+                    <a href="service-wedding.html" class="mega-service-item text-decoration-none text-reset">
+                      <div class="mega-service-icon" style="background: var(--gradient-amber);"><i class="fa-solid fa-ring"></i></div>
+                      <div>
+                        <div class="fw-bold text-primary">Wedding & Engagements</div>
+                        <small class="text-muted">Cinematic love stories captured with natural emotion and master optics.</small>
+                      </div>
+                    </a>
+                    <a href="service-fashion.html" class="mega-service-item text-decoration-none text-reset mt-2">
+                      <div class="mega-service-icon" style="background: var(--gradient-accent);"><i class="fa-solid fa-shirt"></i></div>
+                      <div>
+                        <div class="fw-bold text-primary">Fashion & Commercial</div>
+                        <small class="text-muted">Editorial lookbooks and e-commerce campaigns for leading brands.</small>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="mt-3 pt-3 border-top border-secondary border-opacity-10 d-flex justify-content-between align-items-center">
+                  <span class="small text-muted"><i class="fa-solid fa-bolt text-warning me-1"></i> 30-Minute Instant Turnaround on all ID & Passport Photos</span>
+                  <a href="services.html" class="btn btn-sm btn-outline-glow">View All 12 Services <i class="fa-solid fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="pricing.html">Pricing</a>
+            </li>
+            
+            <li class="nav-item dropdown position-static">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Pages
+              </a>
+              <div class="dropdown-menu dropdown-menu-glass mega-menu-container start-50 translate-middle-x">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <h6 class="fw-bold text-primary mb-3"><i class="fa-solid fa-compass me-2"></i>Discover & Learn</h6>
+                    <a href="gallery.html" class="mega-service-item text-decoration-none text-reset">
+                      <div class="mega-service-icon"><i class="fa-solid fa-images"></i></div>
+                      <div>
+                        <div class="fw-bold text-primary">Studio Gallery</div>
+                        <small class="text-muted">Explore our award-winning photography portfolio.</small>
+                      </div>
+                    </a>
+                    <a href="testimonials.html" class="mega-service-item text-decoration-none text-reset mt-2">
+                      <div class="mega-service-icon"><i class="fa-solid fa-star"></i></div>
+                      <div>
+                        <div class="fw-bold text-primary">Reviews & Testimonials</div>
+                        <small class="text-muted">See what our satisfied clients have to say.</small>
+                      </div>
+                    </a>
+                    <a href="blog.html" class="mega-service-item text-decoration-none text-reset mt-2">
+                      <div class="mega-service-icon"><i class="fa-solid fa-newspaper"></i></div>
+                      <div>
+                        <div class="fw-bold text-primary">Blog & Insights</div>
+                        <small class="text-muted">Read our latest studio news, tips, and articles.</small>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-6">
+                    <h6 class="fw-bold text-secondary mb-3"><i class="fa-solid fa-layer-group me-2"></i>Utility & Support</h6>
+                    <a href="faq.html" class="mega-service-item text-decoration-none text-reset">
+                      <div class="mega-service-icon" style="background: var(--gradient-amber);"><i class="fa-solid fa-circle-question"></i></div>
+                      <div>
+                        <div class="fw-bold text-primary">FAQ Help Center</div>
+                        <small class="text-muted">Find quick answers to common studio questions.</small>
+                      </div>
+                    </a>
+                    <a href="login.html" class="mega-service-item text-decoration-none text-reset mt-2">
+                      <div class="mega-service-icon" style="background: var(--gradient-accent);"><i class="fa-solid fa-right-to-bracket"></i></div>
+                      <div>
+                        <div class="fw-bold text-primary">Client Portal</div>
+                        <small class="text-muted">Login or register to manage your photo sessions.</small>
+                      </div>
+                    </a>
+                    <a href="404.html" class="mega-service-item text-decoration-none text-reset mt-2">
+                      <div class="mega-service-icon" style="background: linear-gradient(135deg, #64748b, #475569);"><i class="fa-solid fa-gear"></i></div>
+                      <div>
+                        <div class="fw-bold text-primary">System Pages</div>
+                        <small class="text-muted">404 Error, Coming Soon, and Maintenance layouts.</small>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Header Actions -->
+        <div class="d-flex align-items-center gap-2 flex-nowrap flex-shrink-0">
+          <!-- Theme Switcher -->
+          <button type="button" class="btn btn-sm btn-glass theme-toggle-btn" title="Toggle Dark/Light Mode" aria-label="Toggle Theme">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+
+          <!-- RTL Switcher -->
+          <button type="button" class="btn btn-sm btn-glass rtl-toggle-btn" title="Toggle RTL Layout" aria-label="Toggle RTL">
+            <i class="fa-solid fa-right-left"></i> <span class="d-none d-sm-inline">RTL</span>
+          </button>
+
+          <!-- Dynamic Auth Slot (Login/Register or Profile Dropdown) -->
+          <div id="luminaHeaderAuthSlot" class="d-inline-flex align-items-center">
+            <a href="login.html" class="btn btn-sm btn-glass d-none d-sm-inline-flex align-items-center gap-2">
+              <i class="fa-solid fa-arrow-right-to-bracket"></i>
+              <span>Login</span>
+            </a>
+          </div>
+
+          <!-- Book Appointment Modal Trigger -->
+          <button type="button" class="btn btn-sm btn-primary-gradient btn-shimmer d-none d-sm-inline-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#bookingWizardModal">
+            <i class="fa-regular fa-calendar-check"></i>
+            <span>Book Session</span>
+          </button>
+
+          <!-- Mobile Nav Toggle -->
+          <button class="btn btn-sm btn-glass d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenuOffcanvas" aria-label="Open Mobile Menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+    <!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section text-center pt-5 pb-5">
+      <div class="container pt-4">
+        <div class="d-inline-flex align-items-center bg-white rounded-pill px-3 py-2 mb-4 shadow-sm border" style="font-size: 0.9rem; font-weight: 500;">
+          <i class="fa-solid fa-gem text-primary me-2"></i> Our Heritage & Passion
+        </div>
+        <h1 class="display-3 fw-bold mb-4">Crafting Visual Legacies<br>Since 2011</h1>
+        <p class="lead text-muted mx-auto" style="max-width: 800px;">
+          Where photographic artistry converges with rigorous biometric precision. We celebrate human individuality through master light, authentic expression, and uncompromising optics.
+        </p>
+      </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="py-5">
+      <div class="container pb-5">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 position-relative">
+            <div class="position-relative rounded-4 overflow-hidden shadow-lg" style="height: 500px;">
+              <img src="./assets/photograph.jpg" alt="Photographer" class="w-100 h-100 object-fit-cover">
+            </div>
+            <!-- Floating Badge -->
+            <div class="position-absolute bottom-0 end-0 me-4 mb-4 glass-card p-3 rounded-4 shadow-lg d-flex align-items-center gap-3" data-aos="fade-up" data-aos-delay="200" style="background: var(--bg-surface-glass); backdrop-filter: blur(20px);">
+              <div class="icon-circle bg-warning text-white flex-shrink-0" style="width: 50px; height: 50px;">
+                <i class="fa-solid fa-award fs-5"></i>
+              </div>
+              <div>
+                <h6 class="mb-0 fw-bold text-primary">15+ Global Awards</h6>
+                <small class="text-muted">Master Portrait Association</small>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="d-inline-flex align-items-center bg-light rounded-pill px-3 py-2 mb-4 border" style="font-size: 0.9rem; font-weight: 500;">
+              <i class="fa-solid fa-bullseye text-secondary me-2"></i> Mission & Vision
+            </div>
+            <h2 class="display-5 fw-bold mb-4">More than a photograph. A statement of identity.</h2>
+            <p class="lead text-muted mb-5">
+              Founded by veteran master photographers and optical engineers, LuminaStudio was established with a dual conviction: that official government identification photos should look dignified, and that artistic portraits should feel deeply alive.
+            </p>
+            
+            <div class="row g-4">
+              <div class="col-md-6">
+                <div class="card h-100 border-0 shadow-sm rounded-4 bg-surface">
+                  <div class="card-body p-4">
+                    <div class="icon-circle bg-primary bg-opacity-10 text-primary mb-3" style="width: 50px; height: 50px;">
+                      <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <h5 class="fw-bold text-primary mb-3">Our Vision</h5>
+                    <p class="text-muted mb-0">To set the global benchmark for certified biometric imaging and fine art studio portraiture.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card h-100 border-0 shadow-sm rounded-4 bg-surface">
+                  <div class="card-body p-4">
+                    <div class="icon-circle bg-secondary bg-opacity-10 text-secondary mb-3" style="width: 50px; height: 50px;">
+                      <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <h5 class="fw-bold text-primary mb-3">Our Mission</h5>
+                    <p class="text-muted mb-0">Empowering individuals and leaders with confidence through pristine, enduring imagery.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Journey / Milestones -->
+    <section class="py-5 bg-light">
+      <div class="container py-5">
+        <div class="text-center mb-5">
+          <div class="d-inline-flex align-items-center bg-white rounded-pill px-3 py-2 mb-4 border shadow-sm" style="font-size: 0.9rem; font-weight: 500;">
+            <i class="fa-solid fa-route text-primary me-2"></i> Journey
+          </div>
+          <h2 class="display-5 fw-bold mb-3">Milestones of Excellence</h2>
+          <p class="lead text-muted mx-auto" style="max-width: 700px;">Explore how LuminaStudio expanded from a boutique darkroom into a multi-studio flagship.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+            <div class="card h-100 border-0 shadow-sm rounded-4 hover-lift">
+              <div class="card-body p-4">
+                <span class="badge bg-primary mb-3 fs-6 px-3 py-2 rounded-pill">2011</span>
+                <h5 class="fw-bold text-primary mb-3">First Studio Founded</h5>
+                <p class="text-muted mb-0">Launched in Manhattan with medium format Hasselblad digital systems and custom Broncolor lighting.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="card h-100 border-0 shadow-sm rounded-4 hover-lift">
+              <div class="card-body p-4">
+                <span class="badge bg-secondary mb-3 fs-6 px-3 py-2 rounded-pill">2016</span>
+                <h5 class="fw-bold text-primary mb-3">Biometric Certification</h5>
+                <p class="text-muted mb-0">Pioneered ICAO-standard biometric diagnostic algorithms for 100% embassy acceptance.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+            <div class="card h-100 border-0 shadow-sm rounded-4 hover-lift">
+              <div class="card-body p-4">
+                <span class="badge bg-info text-white mb-3 fs-6 px-3 py-2 rounded-pill" style="background: var(--gradient-primary) !important;">2021</span>
+                <h5 class="fw-bold text-primary mb-3">10,000th Client Milestone</h5>
+                <p class="text-muted mb-0">Expanded corporate enterprise team shoots for Fortune 500 tech firms and diplomatic missions.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+            <div class="card h-100 border-0 shadow-sm rounded-4 hover-lift">
+              <div class="card-body p-4">
+                <span class="badge bg-success mb-3 fs-6 px-3 py-2 rounded-pill">2026</span>
+                <h5 class="fw-bold text-primary mb-3">AI & High-Definition Lab</h5>
+                <p class="text-muted mb-0">Integrated real-time biometric code generation and next-gen retouching cloud portal.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Master Artists -->
+    <section class="py-5">
+      <div class="container py-5">
+        <div class="text-center mb-5">
+          <div class="d-inline-flex align-items-center bg-white rounded-pill px-3 py-2 mb-4 border shadow-sm" style="font-size: 0.9rem; font-weight: 500;">
+            <i class="fa-solid fa-users-viewfinder text-primary me-2"></i> Master Artists
+          </div>
+          <h2 class="display-5 fw-bold mb-3">Meet Our Lead Photographers</h2>
+          <p class="lead text-muted mx-auto" style="max-width: 700px;">Award-winning portrait masters and lighting specialists dedicated to your session.</p>
+        </div>
+
+        <div class="row g-4 text-center">
+          <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+            <div class="card border-0 bg-transparent h-100">
+              <div class="card-body">
+                <div class="position-relative mx-auto mb-4" style="width: 140px; height: 140px;">
+                  <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Elena Vance" class="w-100 h-100 rounded-circle object-fit-cover shadow-sm p-1" style="background: var(--gradient-primary);">
+                </div>
+                <h5 class="fw-bold text-primary mb-1">Elena Vance</h5>
+                <p class="text-muted small mb-3">Creative Director & Lead Portraitist</p>
+                <div class="d-flex justify-content-center gap-2">
+                  <a href="#" class="btn btn-sm btn-light rounded-circle text-muted" style="width: 32px; height: 32px; padding: 0; line-height: 32px;"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="#" class="btn btn-sm btn-light rounded-circle text-muted" style="width: 32px; height: 32px; padding: 0; line-height: 32px;"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="card border-0 bg-transparent h-100">
+              <div class="card-body">
+                <div class="position-relative mx-auto mb-4" style="width: 140px; height: 140px;">
+                  <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Marcus Sterling" class="w-100 h-100 rounded-circle object-fit-cover shadow-sm p-1" style="background: var(--gradient-accent);">
+                </div>
+                <h5 class="fw-bold text-primary mb-1">Marcus Sterling</h5>
+                <p class="text-muted small mb-3">Head of Biometric & Lighting</p>
+                <div class="d-flex justify-content-center gap-2">
+                  <a href="#" class="btn btn-sm btn-light rounded-circle text-muted" style="width: 32px; height: 32px; padding: 0; line-height: 32px;"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="#" class="btn btn-sm btn-light rounded-circle text-muted" style="width: 32px; height: 32px; padding: 0; line-height: 32px;"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+            <div class="card border-0 bg-transparent h-100">
+              <div class="card-body">
+                <div class="position-relative mx-auto mb-4" style="width: 140px; height: 140px;">
+                  <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Sophia Chen" class="w-100 h-100 rounded-circle object-fit-cover shadow-sm p-1" style="background: var(--gradient-amber);">
+                </div>
+                <h5 class="fw-bold text-primary mb-1">Sophia Chen</h5>
+                <p class="text-muted small mb-3">Senior Fashion & Editorial Stylist</p>
+                <div class="d-flex justify-content-center gap-2">
+                  <a href="#" class="btn btn-sm btn-light rounded-circle text-muted" style="width: 32px; height: 32px; padding: 0; line-height: 32px;"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="#" class="btn btn-sm btn-light rounded-circle text-muted" style="width: 32px; height: 32px; padding: 0; line-height: 32px;"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+            <div class="card border-0 bg-transparent h-100">
+              <div class="card-body">
+                <div class="position-relative mx-auto mb-4" style="width: 140px; height: 140px;">
+                  <img src="https://randomuser.me/api/portraits/men/76.jpg" alt="Liam O'Connor" class="w-100 h-100 rounded-circle object-fit-cover shadow-sm p-1" style="background: linear-gradient(135deg, #10b981, #3b82f6);">
+                </div>
+                <h5 class="fw-bold text-primary mb-1">Liam O'Connor</h5>
+                <p class="text-muted small mb-3">Master Retouching & Color Grading</p>
+                <div class="d-flex justify-content-center gap-2">
+                  <a href="#" class="btn btn-sm btn-light rounded-circle text-muted" style="width: 32px; height: 32px; padding: 0; line-height: 32px;"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="#" class="btn btn-sm btn-light rounded-circle text-muted" style="width: 32px; height: 32px; padding: 0; line-height: 32px;"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 mb-5">
+      <div class="container pb-4">
+        <div class="bg-surface rounded-5 p-5 text-center shadow-lg border">
+          <h2 class="display-5 fw-bold mb-3">Visit Our Flagship Studio</h2>
+          <p class="lead text-muted mx-auto mb-4" style="max-width: 600px;">Experience our master lighting setups and enjoy complimentary espresso during your shoot.</p>
+          <div class="d-flex justify-content-center gap-3 flex-wrap">
+            <a href="contact.html" class="btn btn-primary-gradient px-4 py-3 rounded-pill fw-bold">
+              <i class="fa-solid fa-location-dot me-2"></i> Get Studio Directions
+            </a>
+            <a href="services.html" class="btn btn-outline-dark px-4 py-3 rounded-pill fw-bold bg-white">
+              View Services
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-5 mb-5">
+        
+        <!-- Brand Info -->
+        <div class="col-lg-4">
+          <a href="index.html" class="brand-logo text-decoration-none flex-shrink-0">
+            <div class="brand-icon"><i class="fa-solid fa-camera-retro"></i></div>
+            <span>Lumina<span class="accent">Studio</span></span>
+          </a>
+          <p class="footer-brand-desc">
+            Premier photography studio specializing in certified biometric passport & visa photos, luxury executive portraits, and commercial advertising.
+          </p>
+          <div class="d-flex gap-2 mt-4">
+            <a href="#" class="social-circle-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-circle-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-circle-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="social-circle-link" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="social-circle-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h6 class="footer-heading">Services</h6>
+          <ul class="footer-links">
+            <li><a href="service-details.html">Passport Photos</a></li>
+            <li><a href="service-details.html">Visa Biometrics</a></li>
+            <li><a href="service-portrait.html">Executive Headshots</a></li>
+            <li><a href="service-wedding.html">Wedding Stories</a></li>
+            <li><a href="service-family.html">Family Portraits</a></li>
+            <li><a href="services.html">All 12 Services</a></li>
+          </ul>
+        </div>
+
+        <!-- Company Links -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h6 class="footer-heading">Company</h6>
+          <ul class="footer-links">
+            <li><a href="about.html">About Studio</a></li>
+            <li><a href="pricing.html">Pricing Matrix</a></li>
+            <li><a href="gallery.html">Proof Showcase</a></li>
+            <li><a href="blog.html">Photo Journal</a></li>
+            <li><a href="contact.html">Studio Locations</a></li>
+            <li><a href="coming-soon.html">VIP Access</a></li>
+          </ul>
+        </div>
+
+        <!-- Studio Hours & Location -->
+        <div class="col-lg-4">
+          <h6 class="footer-heading">Studio Visit & Hours</h6>
+          <div class="d-flex align-items-start gap-3 mb-3">
+            <i class="fa-solid fa-location-dot text-primary mt-1"></i>
+            <span class="small text-secondary">742 Evergreen Broadway, Suite 400, New York, NY 10012</span>
+          </div>
+          <div class="d-flex align-items-start gap-3 mb-3">
+            <i class="fa-solid fa-phone text-success mt-1"></i>
+            <span class="small text-secondary">+1 (800) 555-LUMINA / (212) 555-0199</span>
+          </div>
+          <div class="d-flex align-items-start gap-3">
+            <i class="fa-solid fa-clock text-warning mt-1"></i>
+            <div class="small text-secondary">
+              <div>Mon - Fri: 8:30 AM - 7:00 PM</div>
+              <div>Saturday: 9:00 AM - 6:00 PM (Walk-ins Welcome)</div>
+              <div>Sunday: 10:00 AM - 4:00 PM (By Appointment)</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="pt-4 border-top border-secondary border-opacity-10 d-flex flex-wrap justify-content-between align-items-center gap-3">
+        <span class="small text-muted">© 2026 LuminaStudio. All Rights Reserved. Commercial ThemeForest Standard.</span>
+        <div class="d-flex gap-3 small text-muted">
+          <a href="#" class="text-reset">Privacy Policy</a>
+          <a href="#" class="text-reset">Terms of Service</a>
+          <a href="#" class="text-reset">Biometric Compliance Guarantee</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Search Modal -->
+  <div class="modal fade" id="searchModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content glass-card border-0" style="background: var(--bg-surface-glass); backdrop-filter: blur(28px);">
+        <div class="modal-body p-4">
+          <form action="services.html" class="position-relative">
+            <input type="text" class="form-control form-control-lg form-control-glass rounded-pill pe-5" placeholder="Search services (e.g. Passport, Wedding)..." autofocus>
+            <button type="submit" class="btn position-absolute top-50 end-0 translate-middle-y me-2 text-primary border-0 bg-transparent">
+              <i class="fa-solid fa-search"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/auth.js"></script>
+</body>
+</html>

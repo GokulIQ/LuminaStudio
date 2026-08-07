@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LuminaStudio - Premium Photography Studio and Certified Biometric Passport & Visa Photo Service. Instant acceptance guaranteed.">
+  <meta name="keywords" content="photo studio, passport photo, visa photo, headshots, wedding photography, portrait studio, retouching">
+  <meta name="author" content="LuminaThemes">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="LuminaStudio - Premium Photography & Certified Passport Photos">
+  <meta property="og:description" content="Capture your moments with master lighting and get 100% government-compliant biometric passport photos.">
+  
+  <title>LuminaStudio | Premium Photo Studio & Certified Passport Photos</title>
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+
+  <!-- Immediate Theme Initializer (Prevents FOUC / Dark Mode Flash) -->
+  <script>
+    (function() {
+      try {
+        var saved = window.location.protocol === 'file:' ? null : localStorage.getItem('lumina_theme');
+        var theme = saved || 'light';
+        var html = document.documentElement;
+        html.setAttribute('data-bs-theme', theme);
+        html.setAttribute('data-theme', theme);
+        if (theme === 'dark') document.documentElement.classList.add('dark-mode-pending');
+      } catch(e) {}
+    })();
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  
+  <!-- FontAwesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- AOS Animation CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+  <!-- SwiperJS CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+  <!-- Core Theme Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  
+  <!-- RTL Layout Support -->
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <!-- Top Scroll Reading Progress Line -->
+  <div class="scroll-progress-bar"></div>
+
+  <!-- Ambient Glow Background Blobs -->
+  <div class="ambient-glow-wrapper">
+    <div class="ambient-blob blob-primary"></div>
+    <div class="ambient-blob blob-accent"></div>
+    <div class="ambient-blob blob-secondary"></div>
+  </div>
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-glass-container d-flex align-items-center justify-content-between flex-nowrap">
+        
+        <!-- Brand Logo -->
+        <a href="index.html" class="brand-logo text-decoration-none flex-shrink-0">
+          <div class="brand-icon">
+            <i class="fa-solid fa-camera-retro"></i>
+          </div>
+          <span>Lumina<span class="accent">Studio</span></span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="navbar navbar-expand-lg p-0 d-none d-lg-flex flex-grow-1 justify-content-center px-lg-4">
+          <ul class="navbar-nav align-items-center">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+              </a>
+              <ul class="dropdown-menu dropdown-menu-glass">
+                <li><a class="dropdown-item active" href="index.html"><i class="fa-solid fa-house-chimney"></i> Home 1 - Classic Studio</a></li>
+                <li><a class="dropdown-item" href="home-2.html"><i class="fa-solid fa-wand-magic-sparkles"></i> Home 2 - SaaS</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            
+            <!-- Mega Menu: Services -->
+            <li class="nav-item dropdown position-static">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Services
+              </a>
+              <div class="dropdown-menu dropdown-menu-glass mega-menu-container start-50 translate-middle-x">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <h6 class="fw-bold text-primary mb-3"><i class="fa-solid fa-passport me-2"></i>Biometric & Official</h6>
+                    <a href="service-details.html" class="mega-service-item text-decoration-none text-reset">
+                      <div class="mega-service-icon"><i class="fa-solid fa-id-card"></i></div>
+                      <div>
+                        <div class="fw-bold text-primary">Passport & Visa Photos</div>
+                        <small class="text-muted">US, UK, Schengen & 100+ countries with biometric compliance guarantee.</small>
+                      </div>
+                    </a>
+                    <a href="service-portrait.html" class="mega-service-item text-decoration-none text-reset mt-2">
+                      <div class="mega-service-icon"><i class="fa-solid fa-user-tie"></i></div>
+                      <div>
+                        <div class="fw-bold text-primary">Executive Headshots</div>
+                        <small class="text-muted">High-impact portraits for LinkedIn, speaking, and corporate leadership.</small>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-6">
+                    <h6 class="fw-bold text-secondary mb-3"><i class="fa-solid fa-film me-2"></i>Creative & Events</h6>
+                    <a href="service-wedding.html" class="mega-service-item text-decoration-none text-reset">
+                      <div class="mega-service-icon" style="background: var(--gradient-amber);"><i class="fa-solid fa-ring"></i></div>
+                      <div>
+                        <div class="fw-bold text-primary">Wedding & Engagements</div>
+                        <small class="text-muted">Cinematic love stories captured with natural emotion and master optics.</small>
+                      </div>
+                    </a>
+                    <a href="service-fashion.html" class="mega-service-item text-decoration-none text-reset mt-2">
+                      <div class="mega-service-icon" style="background: var(--gradient-accent);"><i class="fa-solid fa-shirt"></i></div>
+                      <div>
+                        <div class="fw-bold text-primary">Fashion & Commercial</div>
+                        <small class="text-muted">Editorial lookbooks and e-commerce campaigns for leading brands.</small>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="mt-3 pt-3 border-top border-secondary border-opacity-10 d-flex justify-content-between align-items-center">
+                  <span class="small text-muted"><i class="fa-solid fa-bolt text-warning me-1"></i> 30-Minute Instant Turnaround on all ID & Passport Photos</span>
+                  <a href="services.html" class="btn btn-sm btn-outline-glow">View All 12 Services <i class="fa-solid fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="pricing.html">Pricing</a>
+            </li>
+            
+            <li class="nav-item dropdown position-static">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Pages
+              </a>
+              <div class="dropdown-menu dropdown-menu-glass mega-menu-container start-50 translate-middle-x">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <h6 class="fw-bold text-primary mb-3"><i class="fa-solid fa-compass me-2"></i>Discover & Learn</h6>
+                    <a href="gallery.html" class="mega-service-item text-decoration-none text-reset">
+                      <div class="mega-service-icon"><i class="fa-solid fa-images"></i></div>
+                      <div>
+                        <div class="fw-bold text-primary">Studio Gallery</div>
+                        <small class="text-muted">Explore our award-winning photography portfolio.</small>
+                      </div>
+                    </a>
+                    <a href="testimonials.html" class="mega-service-item text-decoration-none text-reset mt-2">
+                      <div class="mega-service-icon"><i class="fa-solid fa-star"></i></div>
+                      <div>
+                        <div class="fw-bold text-primary">Reviews & Testimonials</div>
+                        <small class="text-muted">See what our satisfied clients have to say.</small>
+                      </div>
+                    </a>
+                    <a href="blog.html" class="mega-service-item text-decoration-none text-reset mt-2">
+                      <div class="mega-service-icon"><i class="fa-solid fa-newspaper"></i></div>
+                      <div>
+                        <div class="fw-bold text-primary">Blog & Insights</div>
+                        <small class="text-muted">Read our latest studio news, tips, and articles.</small>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-6">
+                    <h6 class="fw-bold text-secondary mb-3"><i class="fa-solid fa-layer-group me-2"></i>Utility & Support</h6>
+                    <a href="faq.html" class="mega-service-item text-decoration-none text-reset">
+                      <div class="mega-service-icon" style="background: var(--gradient-amber);"><i class="fa-solid fa-circle-question"></i></div>
+                      <div>
+                        <div class="fw-bold text-primary">FAQ Help Center</div>
+                        <small class="text-muted">Find quick answers to common studio questions.</small>
+                      </div>
+                    </a>
+                    <a href="login.html" class="mega-service-item text-decoration-none text-reset mt-2">
+                      <div class="mega-service-icon" style="background: var(--gradient-accent);"><i class="fa-solid fa-right-to-bracket"></i></div>
+                      <div>
+                        <div class="fw-bold text-primary">Client Portal</div>
+                        <small class="text-muted">Login or register to manage your photo sessions.</small>
+                      </div>
+                    </a>
+                    <a href="404.html" class="mega-service-item text-decoration-none text-reset mt-2">
+                      <div class="mega-service-icon" style="background: linear-gradient(135deg, #64748b, #475569);"><i class="fa-solid fa-gear"></i></div>
+                      <div>
+                        <div class="fw-bold text-primary">System Pages</div>
+                        <small class="text-muted">404 Error, Coming Soon, and Maintenance layouts.</small>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Header Actions -->
+        <div class="d-flex align-items-center gap-2 flex-nowrap flex-shrink-0">
+          <!-- Theme Switcher -->
+          <button type="button" class="btn btn-sm btn-glass theme-toggle-btn" title="Toggle Dark/Light Mode" aria-label="Toggle Theme">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+
+          <!-- RTL Switcher -->
+          <button type="button" class="btn btn-sm btn-glass rtl-toggle-btn" title="Toggle RTL Layout" aria-label="Toggle RTL">
+            <i class="fa-solid fa-right-left"></i> <span class="d-none d-sm-inline">RTL</span>
+          </button>
+
+          <!-- Dynamic Auth Slot (Login/Register or Profile Dropdown) -->
+          <div id="luminaHeaderAuthSlot" class="d-inline-flex align-items-center">
+            <a href="register.html" class="btn btn-sm btn-glass d-none d-sm-inline-flex align-items-center gap-2">
+              <i class="fa-solid fa-user-plus"></i>
+              <span>Register</span>
+            </a>
+          </div>
+
+          <!-- Book Appointment Modal Trigger -->
+          <button type="button" class="btn btn-sm btn-primary-gradient btn-shimmer d-none d-sm-inline-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#bookingWizardModal">
+            <i class="fa-regular fa-calendar-check"></i>
+            <span>Book Session</span>
+          </button>
+
+          <!-- Mobile Nav Toggle -->
+          <button class="btn btn-sm btn-glass d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenuOffcanvas" aria-label="Open Mobile Menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== -->
+  <section class="hero-section">
+    <div class="container position-relative">
+      <div class="row align-items-center g-5">
+        
+        <!-- Left Content -->
+        <div class="col-lg-6 hero-animate-left">
+          <div class="hero-badge-pill">
+            <span class="pulse-dot"></span>
+            <span>Guaranteed Government Biometric Compliance</span>
+          </div>
+
+          <h1 class="hero-title">
+            Flawless Portraits. <br>
+            <span class="accent">Instant Passport</span> Photos in 15 Minutes.
+          </h1>
+
+          <p class="lead text-secondary mb-4">
+            Master studio lighting, state-of-the-art camera optics, and official biometric certification for over 120+ countries. Experience luxury portraiture that feels authentic, confident, and timeless.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <button type="button" class="btn btn-lg btn-primary-gradient btn-shimmer" data-bs-toggle="modal" data-bs-target="#bookingWizardModal">
+              <i class="fa-solid fa-calendar-plus"></i> Book a Session Now
+            </button>
+            <a href="#passportCheckerSection" class="btn btn-lg btn-glass">
+              <i class="fa-solid fa-magnifying-glass-location"></i> Check Passport Specs
+            </a>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="d-flex align-items-center gap-4 pt-3 border-top border-secondary border-opacity-10">
+            <div class="d-flex align-items-center gap-2">
+              <i class="fa-solid fa-circle-check text-success fs-5"></i>
+              <div>
+                <strong class="d-block text-primary small">100% Guaranteed</strong>
+                <span class="small text-muted">Or Free Retake</span>
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <i class="fa-solid fa-bolt text-warning fs-5"></i>
+              <div>
+                <strong class="d-block text-primary small">15-Min Turnaround</strong>
+                <span class="small text-muted">Print & Digital Copy</span>
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <i class="fa-solid fa-star text-warning fs-5"></i>
+              <div>
+                <strong class="d-block text-primary small">4.9 / 5.0 Rating</strong>
+                <span class="small text-muted">5,200+ Reviews</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Visual -->
+        <div class="col-lg-6 hero-animate-right">
+          <div class="hero-image-wrapper text-center">
+            
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&q=80" alt="Professional Studio Portrait Model" class="hero-main-img shadow-xl">
+
+            <!-- Floating Glass Card 1 -->
+            <div class="glass-card floating-stat-card stat-card-1 text-start">
+              <div class="d-flex align-items-center gap-3">
+                <div class="spec-badge-icon" style="width: 44px; height: 44px; border-radius: 12px; background: var(--success-light); color: var(--success); display: flex; align-items: center; justify-content: center; font-size: 1.25rem;">
+                  <i class="fa-solid fa-shield-check"></i>
+                </div>
+                <div>
+                  <div class="fw-bold text-primary">Biometric Validated</div>
+                  <small class="text-success"><i class="fa-solid fa-check me-1"></i> ICAO 9303 Compliant</small>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Glass Card 2 -->
+            <div class="glass-card floating-stat-card stat-card-2 text-start">
+              <div class="d-flex align-items-center gap-3">
+                <div class="spec-badge-icon" style="width: 44px; height: 44px; border-radius: 12px; background: var(--primary-light); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.25rem;">
+                  <i class="fa-solid fa-bolt"></i>
+                </div>
+                <div>
+                  <div class="fw-bold text-primary">Instant Print & USB</div>
+                  <small class="text-muted">Ready while you wait</small>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       INTERACTIVE PASSPORT & VISA BIOMETRIC SPEC CALCULATOR
+       ========================================================================== -->
+  <section id="passportCheckerSection" class="py-5">
+    <div class="container">
+      
+      <div class="text-center max-w-700 mx-auto mb-5" data-aos="fade-up">
+        <span class="glass-pill mb-2"><i class="fa-solid fa-globe text-primary"></i> International Compliance Engine</span>
+        <h2 class="h1 mt-2">Instant Passport & Visa Spec Checker</h2>
+        <p class="text-secondary">Select your destination country to verify official photo dimensions, background color guidelines, and government biometric criteria.</p>
+      </div>
+
+      <!-- Quick Country Pills -->
+      <div class="d-flex flex-wrap gap-2 justify-content-center mb-4" data-aos="fade-up" data-aos-delay="100">
+        <button type="button" class="filter-btn passport-quick-pill active" data-country="usa"><i class="fa-solid fa-flag-usa me-1"></i> USA (2x2 in)</button>
+        <button type="button" class="filter-btn passport-quick-pill" data-country="uk">🇬🇧 United Kingdom</button>
+        <button type="button" class="filter-btn passport-quick-pill" data-country="schengen">🇪🇺 Schengen / EU</button>
+        <button type="button" class="filter-btn passport-quick-pill" data-country="canada">🇨🇦 Canada (PR/Visa)</button>
+        <button type="button" class="filter-btn passport-quick-pill" data-country="australia">🇦🇺 Australia</button>
+        <button type="button" class="filter-btn passport-quick-pill" data-country="india">🇮🇳 India (OCI/Passport)</button>
+        <button type="button" class="filter-btn passport-quick-pill" data-country="china">🇨🇳 China</button>
+        <button type="button" class="filter-btn passport-quick-pill" data-country="japan">🇯🇵 Japan</button>
+      </div>
+
+      <!-- Interactive Spec Card -->
+      <div class="glass-card p-4 p-md-5" data-aos="zoom-in" data-aos-delay="200">
+        <div class="row align-items-center g-4">
+          
+          <div class="col-lg-7">
+            <div class="d-flex align-items-center justify-content-between mb-3 flex-wrap gap-2">
+              <h3 id="specCountryName" class="h3 text-primary mb-0">United States of America (US Passport / Visa)</h3>
+              <span class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 px-3 py-2 rounded-pill"><i class="fa-solid fa-circle-check me-1"></i> 100% Acceptance Guarantee</span>
+            </div>
+
+            <div class="row g-3 mb-4">
+              <div class="col-sm-6">
+                <div class="spec-box-card">
+                  <small class="text-muted d-block mb-1"><i class="fa-solid fa-ruler-combined me-1 text-primary"></i> Exact Dimensions</small>
+                  <div id="specDimensions" class="spec-badge-val">2 x 2 inches (51 x 51 mm)</div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="spec-box-card">
+                  <small class="text-muted d-block mb-1"><i class="fa-solid fa-palette me-1 text-secondary"></i> Background Requirement</small>
+                  <div id="specBackground" class="spec-badge-val">Plain White / Off-White</div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="spec-box-card">
+                  <small class="text-muted d-block mb-1"><i class="fa-solid fa-head-side-couch me-1 text-accent"></i> Head Ratio</small>
+                  <div id="specHeadHeight" class="spec-badge-val">1 to 1 3/8 inches (25 - 35 mm)</div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="spec-box-card">
+                  <small class="text-muted d-block mb-1"><i class="fa-solid fa-tag me-1 text-warning"></i> Studio Package Price</small>
+                  <div id="specPrice" class="spec-badge-val text-success">$19.99</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Rules List -->
+            <h6 class="fw-bold text-primary mb-2">Mandatory Biometric Standards:</h6>
+            <ul id="specRulesList" class="list-unstyled mb-4">
+              <!-- Rendered via JS -->
+            </ul>
+
+            <button type="button" class="btn btn-primary-gradient px-4" data-bs-toggle="modal" data-bs-target="#bookingWizardModal">
+              <i class="fa-solid fa-calendar-check me-2"></i> Book This Passport Photo Format
+            </button>
+          </div>
+
+          <div class="col-lg-5 text-center">
+            <div class="p-3 glass-card bg-surface-elevated position-relative d-inline-block">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80" alt="Passport Biometric Spec Sample" class="rounded-4" style="width: 280px; height: 320px; object-fit: cover; border: 2px dashed var(--primary);">
+              <div class="position-absolute top-0 start-0 m-4 px-2 py-1 bg-dark bg-opacity-75 text-white rounded small">Biometric Grid Verified</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       BEFORE / AFTER RETOUCHING INTERACTIVE SLIDER
+       ========================================================================== -->
+  <section class="py-5 bg-subtle">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        
+        <div class="col-lg-5" data-aos="fade-right">
+          <span class="glass-pill mb-2"><i class="fa-solid fa-wand-magic-sparkles text-secondary"></i> Master Retouching</span>
+          <h2 class="h1 mt-2">Natural, Pristine Skin Retouching</h2>
+          <p class="text-secondary mb-4">
+            We preserve your authentic natural texture while eliminating temporary blemishes, evening specular highlights, and perfecting skin tones for magazine-grade portraits.
+          </p>
+          
+          <ul class="list-unstyled mb-4">
+            <li class="d-flex align-items-center gap-2 mb-2">
+              <i class="fa-solid fa-circle-check text-success"></i>
+              <span>High-Frequency Separation (HFS) Texture Preservation</span>
+            </li>
+            <li class="d-flex align-items-center gap-2 mb-2">
+              <i class="fa-solid fa-circle-check text-success"></i>
+              <span>Dodge & Burn Master 3D Lighting Sculpting</span>
+            </li>
+            <li class="d-flex align-items-center gap-2 mb-2">
+              <i class="fa-solid fa-circle-check text-success"></i>
+              <span>Flawless Eyewear Glare & Hair Stray Removal</span>
+            </li>
+          </ul>
+
+          <a href="service-details.html" class="btn btn-outline-glow">
+            Learn More About Retouching <i class="fa-solid fa-arrow-right ms-2"></i>
+          </a>
+        </div>
+
+        <div class="col-lg-7" data-aos="fade-left">
+          <div class="before-after-container">
+            <!-- After (Full / Base) -->
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=1200&q=80" alt="Retouched Master Portrait After" class="before-after-img">
+            
+            <!-- Before (Clipped) -->
+            <div class="before-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=1200&q=40&sat=-15&con=10" alt="Raw Unretouched Portrait Before">
+            </div>
+
+            <!-- Handle -->
+            <div class="slider-handle">
+              <div class="slider-handle-button">
+                <i class="fa-solid fa-left-right"></i>
+              </div>
+            </div>
+
+            <!-- Badges -->
+            <span class="badge-overlay-before">RAW UNEDITED</span>
+            <span class="badge-overlay-after">STUDIO RETOUCHED</span>
+          </div>
+          <div class="text-center text-muted small mt-2">
+            <i class="fa-solid fa-hand-pointer me-1"></i> Drag slider left or right to inspect retouching details
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FEATURED SERVICES SECTION
+       ========================================================================== -->
+  <section class="py-5">
+    <div class="container">
+      
+      <div class="d-flex flex-wrap justify-content-between align-items-end mb-5" data-aos="fade-up">
+        <div>
+          <span class="glass-pill mb-2"><i class="fa-solid fa-camera-retro text-primary"></i> Studio Specializations</span>
+          <h2 class="h1 mt-2">Crafted for Every Milestone</h2>
+        </div>
+        <a href="services.html" class="btn btn-outline-glow mt-3 mt-md-0">Explore All Services <i class="fa-solid fa-arrow-right ms-2"></i></a>
+      </div>
+
+      <div class="row g-4">
+        
+        <!-- Service 1 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="50">
+          <div class="glass-card glass-card-hover p-4 h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="spec-badge-icon mb-3" style="width: 52px; height: 52px; border-radius: 14px; background: var(--primary-light); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                <i class="fa-solid fa-passport"></i>
+              </div>
+              <h4 class="h5 mb-2">Biometric Passport & Visa</h4>
+              <p class="text-muted small mb-3">Instant compliance check for US, UK, Schengen, Canada, and 120+ nations with barcode generation.</p>
+            </div>
+            <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-10">
+              <span class="fw-bold text-primary">From $19.99</span>
+              <a href="service-details.html" class="btn btn-sm btn-glass">Details <i class="fa-solid fa-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="glass-card glass-card-hover p-4 h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="spec-badge-icon mb-3" style="width: 52px; height: 52px; border-radius: 14px; background: var(--secondary-light); color: var(--secondary); display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                <i class="fa-solid fa-user-tie"></i>
+              </div>
+              <h4 class="h5 mb-2">Executive & Corporate Headshots</h4>
+              <p class="text-muted small mb-3">Modern corporate portraits tailored for C-level leadership, LinkedIn profiles, and keynote speakers.</p>
+            </div>
+            <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-10">
+              <span class="fw-bold text-primary">From $89.00</span>
+              <a href="service-portrait.html" class="btn btn-sm btn-glass">Details <i class="fa-solid fa-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
+          <div class="glass-card glass-card-hover p-4 h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="spec-badge-icon mb-3" style="width: 52px; height: 52px; border-radius: 14px; background: rgba(245, 158, 11, 0.15); color: #f59e0b; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                <i class="fa-solid fa-ring"></i>
+              </div>
+              <h4 class="h5 mb-2">Luxury Weddings & Engagements</h4>
+              <p class="text-muted small mb-3">Cinematic wedding storytelling, capturing authentic emotion, candid joy, and timeless memories.</p>
+            </div>
+            <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-10">
+              <span class="fw-bold text-primary">From $799.00</span>
+              <a href="service-wedding.html" class="btn btn-sm btn-glass">Details <i class="fa-solid fa-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="glass-card glass-card-hover p-4 h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="spec-badge-icon mb-3" style="width: 52px; height: 52px; border-radius: 14px; background: rgba(6, 182, 212, 0.15); color: #06b6d4; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                <i class="fa-solid fa-shirt"></i>
+              </div>
+              <h4 class="h5 mb-2">Fashion & Lookbook Editorial</h4>
+              <p class="text-muted small mb-3">High-fashion campaigns, model portfolios, and lookbooks styled with creative studio lighting setups.</p>
+            </div>
+            <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-10">
+              <span class="fw-bold text-primary">From $249.00</span>
+              <a href="service-fashion.html" class="btn btn-sm btn-glass">Details <i class="fa-solid fa-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="250">
+          <div class="glass-card glass-card-hover p-4 h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="spec-badge-icon mb-3" style="width: 52px; height: 52px; border-radius: 14px; background: rgba(16, 185, 129, 0.15); color: #10b981; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                <i class="fa-solid fa-people-roof"></i>
+              </div>
+              <h4 class="h5 mb-2">Family & Newborn Studio</h4>
+              <p class="text-muted small mb-3">Heartwarming family milestones, maternity elegance, and gentle newborn photography sessions.</p>
+            </div>
+            <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-10">
+              <span class="fw-bold text-primary">From $149.00</span>
+              <a href="service-family.html" class="btn btn-sm btn-glass">Details <i class="fa-solid fa-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="glass-card glass-card-hover p-4 h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="spec-badge-icon mb-3" style="width: 52px; height: 52px; border-radius: 14px; background: rgba(168, 85, 247, 0.15); color: #a855f7; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                <i class="fa-solid fa-box-open"></i>
+              </div>
+              <h4 class="h5 mb-2">Commercial & Product Catalog</h4>
+              <p class="text-muted small mb-3">Razor-sharp product photography, clean white packshots, and Amazon/Shopify ready assets.</p>
+            </div>
+            <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-10">
+              <span class="fw-bold text-primary">From $199.00</span>
+              <a href="service-commercial.html" class="btn btn-sm btn-glass">Details <i class="fa-solid fa-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       DYNAMIC PORTFOLIO GALLERY (FILTER & SEARCH)
+       ========================================================================== -->
+  <section class="py-5 bg-subtle">
+    <div class="container">
+      
+      <div class="text-center max-w-700 mx-auto mb-4" data-aos="fade-up">
+        <span class="glass-pill mb-2"><i class="fa-solid fa-images text-primary"></i> Masterpieces</span>
+        <h2 class="h1 mt-2">Curated Studio Portfolio</h2>
+        <p class="text-secondary">Explore our recent portraiture, passport sessions, and editorial campaigns.</p>
+      </div>
+
+      <!-- Filter Controls & Live Search -->
+      <div class="row align-items-center justify-content-between mb-4 g-3" data-aos="fade-up">
+        <div class="col-md-8">
+          <div class="portfolio-filter-nav justify-content-md-start mb-0">
+            <button type="button" class="filter-btn active" data-filter="all">All Works</button>
+            <button type="button" class="filter-btn" data-filter="passport">Passport & ID</button>
+            <button type="button" class="filter-btn" data-filter="portrait">Portraits</button>
+            <button type="button" class="filter-btn" data-filter="wedding">Weddings</button>
+            <button type="button" class="filter-btn" data-filter="fashion">Fashion</button>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="input-icon-group">
+            <i class="fa-solid fa-magnifying-glass icon-addon"></i>
+            <input type="text" id="portfolioSearchInput" class="form-control form-control-glass" placeholder="Search gallery by keyword...">
+          </div>
+        </div>
+      </div>
+
+      <!-- Portfolio Grid -->
+      <div class="row g-4 portfolio-grid-wrapper">
+        
+        <!-- Item 1 -->
+        <div class="col-md-6 col-lg-4 portfolio-item-col" data-category="passport portrait" data-aos="fade-up" data-aos-delay="50">
+          <div class="portfolio-card glass-card">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="US Biometric Passport Photo Portrait">
+            <div class="portfolio-overlay">
+              <span class="badge bg-primary mb-2 align-self-start">Passport & ID</span>
+              <h5 class="text-white mb-1 portfolio-title">US Biometric Passport Session</h5>
+              <p class="small text-white-50 mb-0 portfolio-desc">Guaranteed 2x2 ICAO compliance with natural skin tones.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="col-md-6 col-lg-4 portfolio-item-col" data-category="portrait" data-aos="fade-up" data-aos-delay="100">
+          <div class="portfolio-card glass-card">
+            <img src="./assets/Tech Founder Executive Headshot.jpg" alt="Executive Corporate Headshot">
+            <div class="portfolio-overlay">
+              <span class="badge bg-secondary mb-2 align-self-start">Corporate Portrait</span>
+              <h5 class="text-white mb-1 portfolio-title">Tech Founder Executive Headshot</h5>
+              <p class="small text-white-50 mb-0 portfolio-desc">Dramatic studio rim lighting for Forbes feature.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="col-md-6 col-lg-4 portfolio-item-col" data-category="wedding" data-aos="fade-up" data-aos-delay="150">
+          <div class="portfolio-card glass-card">
+            <img src="./assets/Sunset Vineyard Wedding.jpg" alt="Luxury Wedding Portrait">
+            <div class="portfolio-overlay">
+              <span class="badge bg-warning text-dark mb-2 align-self-start">Wedding</span>
+              <h5 class="text-white mb-1 portfolio-title">Sunset Vineyard Wedding</h5>
+              <p class="small text-white-50 mb-0 portfolio-desc">Golden hour cinematic love story in Tuscany.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="col-md-6 col-lg-4 portfolio-item-col" data-category="fashion" data-aos="fade-up" data-aos-delay="200">
+          <div class="portfolio-card glass-card">
+            <img src="./assets/High-Fashion Autumn Lookbook.jpg" alt="Vogue Editorial Lookbook">
+            <div class="portfolio-overlay">
+              <span class="badge bg-info text-dark mb-2 align-self-start">Fashion Editorial</span>
+              <h5 class="text-white mb-1 portfolio-title">High-Fashion Autumn Lookbook</h5>
+              <p class="small text-white-50 mb-0 portfolio-desc">Vogue feature with saturated gel light accents.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="col-md-6 col-lg-4 portfolio-item-col" data-category="passport" data-aos="fade-up" data-aos-delay="250">
+          <div class="portfolio-card glass-card">
+            <img src="./assets/HM Passport Office Digital Code.jpg" alt="UK Passport Photo Code">
+            <div class="portfolio-overlay">
+              <span class="badge bg-primary mb-2 align-self-start">Passport & ID</span>
+              <h5 class="text-white mb-1 portfolio-title">UK HMPO Digital Photo Code</h5>
+              <p class="small text-white-50 mb-0 portfolio-desc">Instant online submission photo code generation.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="col-md-6 col-lg-4 portfolio-item-col" data-category="portrait" data-aos="fade-up" data-aos-delay="300">
+          <div class="portfolio-card glass-card">
+            <img src="./assets/Rembrandt Lighting Portrait.jpg" alt="Fine Art Studio Portrait">
+            <div class="portfolio-overlay">
+              <span class="badge bg-secondary mb-2 align-self-start">Fine Art</span>
+              <h5 class="text-white mb-1 portfolio-title">Rembrandt Lighting Portrait</h5>
+              <p class="small text-white-50 mb-0 portfolio-desc">Classic painterly mood crafted in dark studio.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ANIMATED STATS & METRICS
+       ========================================================================== -->
+  <section class="py-5 stats-counter-section">
+    <div class="container">
+      <div class="glass-card p-4 p-md-5">
+        <div class="row g-4 text-center">
+          
+          <div class="col-6 col-md-3">
+            <div class="h1 fw-bold text-primary mb-1"><span class="stat-counter-number" data-target="15420">0</span>+</div>
+            <div class="text-muted small text-uppercase fw-semibold">Sessions Completed</div>
+          </div>
+
+          <div class="col-6 col-md-3">
+            <div class="h1 fw-bold text-success mb-1"><span class="stat-counter-number" data-target="99.9">0</span>%</div>
+            <div class="text-muted small text-uppercase fw-semibold">Visa Acceptance Rate</div>
+          </div>
+
+          <div class="col-6 col-md-3">
+            <div class="h1 fw-bold text-secondary mb-1"><span class="stat-counter-number" data-target="18">0</span>+</div>
+            <div class="text-muted small text-uppercase fw-semibold">Photography Awards</div>
+          </div>
+
+          <div class="col-6 col-md-3">
+            <div class="h1 fw-bold text-accent mb-1"><span class="stat-counter-number" data-target="12">0</span></div>
+            <div class="text-muted small text-uppercase fw-semibold">Master Artists</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       HOW IT WORKS / BOOKING PROCESS
+       ========================================================================== -->
+  <section class="py-5 bg-subtle">
+    <div class="container">
+      
+      <div class="text-center max-w-700 mx-auto mb-5" data-aos="fade-up">
+        <span class="glass-pill mb-2"><i class="fa-solid fa-route text-primary"></i> 4 Simple Steps</span>
+        <h2 class="h1 mt-2">The Studio Experience</h2>
+        <p class="text-secondary">From instant online reservation to holding your certified prints in hand.</p>
+      </div>
+
+      <div class="row g-4">
+        
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="50">
+          <div class="glass-card p-4 h-100 text-center">
+            <div class="wizard-step-node mx-auto mb-3 active">1</div>
+            <h5 class="h6 mb-2">1. Book Your Slot</h5>
+            <p class="small text-muted mb-0">Select your preferred date, time slot, and photography package in under 60 seconds.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="glass-card p-4 h-100 text-center">
+            <div class="wizard-step-node mx-auto mb-3 active">2</div>
+            <h5 class="h6 mb-2">2. Studio Shoot</h5>
+            <p class="small text-muted mb-0">Guided posing, biometric framing, and lighting calibration by seasoned studio photographers.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="150">
+          <div class="glass-card p-4 h-100 text-center">
+            <div class="wizard-step-node mx-auto mb-3 active">3</div>
+            <h5 class="h6 mb-2">3. Instant Retouch</h5>
+            <p class="small text-muted mb-0">Real-time ICAO compliance scan, background clean up, and authentic skin optimization.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="glass-card p-4 h-100 text-center">
+            <div class="wizard-step-node mx-auto mb-3 completed">4</div>
+            <h5 class="h6 mb-2">4. Pick Up & Download</h5>
+            <p class="small text-muted mb-0">Walk away with lab-quality physical prints, digital biometric files, and online photo code.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PRICING PREVIEW
+       ========================================================================== -->
+  <section class="py-5">
+    <div class="container">
+      
+      <div class="text-center max-w-700 mx-auto mb-5" data-aos="fade-up">
+        <span class="glass-pill mb-2"><i class="fa-solid fa-tags text-primary"></i> Clear & Transparent</span>
+        <h2 class="h1 mt-2">Popular Studio Packages</h2>
+        <p class="text-secondary">No hidden fees. Every session includes high-resolution digital files and satisfaction guarantee.</p>
+      </div>
+
+      <div class="row g-4 align-items-center">
+        
+        <!-- Plan 1 -->
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="50">
+          <div class="glass-card pricing-card">
+            <h4 class="h5 text-primary mb-1">Standard Passport / Visa</h4>
+            <p class="small text-muted">For travel visas, renewal, citizenship</p>
+            <div class="pricing-price">$19.99</div>
+            
+            <ul class="pricing-features-list">
+              <li><i class="fa-solid fa-circle-check check"></i> Set of 4 physical prints</li>
+              <li><i class="fa-solid fa-circle-check check"></i> Digital biometric JPEG file</li>
+              <li><i class="fa-solid fa-circle-check check"></i> Government acceptance guarantee</li>
+              <li><i class="fa-solid fa-circle-xmark cross"></i> High-end beauty retouching</li>
+            </ul>
+
+            <button type="button" class="btn btn-outline-glow w-100" data-bs-toggle="modal" data-bs-target="#bookingWizardModal">Choose Package</button>
+          </div>
+        </div>
+
+        <!-- Plan 2 (Featured) -->
+        <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+          <div class="glass-card pricing-card featured bg-surface-elevated">
+            <span class="pricing-ribbon">Most Popular</span>
+            <h4 class="h5 text-primary mb-1">Executive Headshot</h4>
+            <p class="small text-muted">LinkedIn, corporate & speaker profile</p>
+            <div class="pricing-price">$89.00</div>
+            
+            <ul class="pricing-features-list">
+              <li><i class="fa-solid fa-circle-check check"></i> 30-minute private studio session</li>
+              <li><i class="fa-solid fa-circle-check check"></i> 3 fully retouched 4K portraits</li>
+              <li><i class="fa-solid fa-circle-check check"></i> Unlimited outfit changes</li>
+              <li><i class="fa-solid fa-circle-check check"></i> Full commercial usage rights</li>
+            </ul>
+
+            <button type="button" class="btn btn-primary-gradient btn-shimmer w-100" data-bs-toggle="modal" data-bs-target="#bookingWizardModal">Book Headshot</button>
+          </div>
+        </div>
+
+        <!-- Plan 3 -->
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="150">
+          <div class="glass-card pricing-card">
+            <h4 class="h5 text-primary mb-1">Studio Portrait Session</h4>
+            <p class="small text-muted">Family, couples, creative fashion</p>
+            <div class="pricing-price">$199.00</div>
+            
+            <ul class="pricing-features-list">
+              <li><i class="fa-solid fa-circle-check check"></i> 60-minute multi-backdrop shoot</li>
+              <li><i class="fa-solid fa-circle-check check"></i> 10 master retouched photos</li>
+              <li><i class="fa-solid fa-circle-check check"></i> Online private proofing gallery</li>
+              <li><i class="fa-solid fa-circle-check check"></i> Archival 8x10 print included</li>
+            </ul>
+
+            <button type="button" class="btn btn-outline-glow w-100" data-bs-toggle="modal" data-bs-target="#bookingWizardModal">Choose Package</button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CUSTOMER TESTIMONIALS (SWIPER)
+       ========================================================================== -->
+  <section class="py-5 bg-subtle">
+    <div class="container">
+      
+      <div class="text-center max-w-700 mx-auto mb-5" data-aos="fade-up">
+        <span class="glass-pill mb-2"><i class="fa-solid fa-comments text-primary"></i> Client Love</span>
+        <h2 class="h1 mt-2">What Our Clients Say</h2>
+        <p class="text-secondary">Read authentic reviews from diplomats, tech leaders, families, and couples.</p>
+      </div>
+
+      <div class="swiper testimonials-swiper" data-aos="fade-up">
+        <div class="swiper-wrapper pb-5">
+          
+          <!-- Testimonial 1 -->
+          <div class="swiper-slide">
+            <div class="glass-card testimonial-card">
+              <div>
+                <div class="rating-stars">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="fst-italic text-secondary mb-4">
+                  "I needed Canadian PR photos which have extremely strict specs and back stamps. LuminaStudio did it in 15 minutes and they were accepted on the first attempt without questions. Flawless service!"
+                </p>
+              </div>
+              <div class="d-flex align-items-center gap-3">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Client Sarah Jenkins" class="testimonial-avatar">
+                <div>
+                  <h6 class="mb-0 text-primary fw-bold">Sarah Jenkins</h6>
+                  <small class="text-muted">Canadian PR Applicant</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="swiper-slide">
+            <div class="glass-card testimonial-card">
+              <div>
+                <div class="rating-stars">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="fst-italic text-secondary mb-4">
+                  "The executive headshots taken here transformed my LinkedIn profile and speaking engagement presence. The photographer gave fantastic posing guidance that made me look natural and commanding."
+                </p>
+              </div>
+              <div class="d-flex align-items-center gap-3">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Client David Vance" class="testimonial-avatar">
+                <div>
+                  <h6 class="mb-0 text-primary fw-bold">David Vance</h6>
+                  <small class="text-muted">Managing Partner, Apex Capital</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="swiper-slide">
+            <div class="glass-card testimonial-card">
+              <div>
+                <div class="rating-stars">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="fst-italic text-secondary mb-4">
+                  "We brought our 3-month-old baby for a passport photo, which is notoriously difficult. The team was so patient, gentle, and used specialized baby support lighting. 10/10 recommend!"
+                </p>
+              </div>
+              <div class="d-flex align-items-center gap-3">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80" alt="Client Elena Rostova" class="testimonial-avatar">
+                <div>
+                  <h6 class="mb-0 text-primary fw-bold">Elena Rostova</h6>
+                  <small class="text-muted">Family Milestone Client</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="swiper-pagination testimonials-pagination text-center"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       LATEST BLOG & PHOTOGRAPHY INSIGHTS
+       ========================================================================== -->
+  <section class="py-5">
+    <div class="container">
+      
+      <div class="d-flex flex-wrap justify-content-between align-items-end mb-5" data-aos="fade-up">
+        <div>
+          <span class="glass-pill mb-2"><i class="fa-solid fa-newspaper text-primary"></i> Journal</span>
+          <h2 class="h1 mt-2">Photography Tips & Guides</h2>
+        </div>
+        <a href="blog.html" class="btn btn-outline-glow mt-3 mt-md-0">View All Articles <i class="fa-solid fa-arrow-right ms-2"></i></a>
+      </div>
+
+      <div class="row g-4">
+        
+        <!-- Post 1 -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="50">
+          <div class="glass-card blog-card">
+            <div class="blog-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=600&q=80" alt="Passport Photo Rejection Reasons">
+              <span class="blog-category-badge">Passport Guide</span>
+            </div>
+            <div class="blog-body">
+              <div>
+                <div class="blog-meta">
+                  <span><i class="fa-regular fa-clock me-1"></i> 5 min read</span>
+                  <span><i class="fa-regular fa-calendar me-1"></i> Oct 15, 2025</span>
+                </div>
+                <h5 class="h6 mb-2"><a href="blog-details.html" class="text-reset">Top 7 Reasons Passport Photos Get Rejected (And How to Avoid Them)</a></h5>
+                <p class="small text-muted mb-3">Learn about eyewear glare, shadows, smile restrictions, and non-standard dimensions.</p>
+              </div>
+              <a href="blog-details.html" class="btn btn-sm btn-glass align-self-start">Read Article <i class="fa-solid fa-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Post 2 -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="glass-card blog-card">
+            <div class="blog-img-wrapper">
+              <img src="./assets/Silicon Valley CEO Executive Headshot.jpg" alt="What to Wear for Corporate Headshots">
+              <span class="blog-category-badge">Portrait Styling</span>
+            </div>
+            <div class="blog-body">
+              <div>
+                <div class="blog-meta">
+                  <span><i class="fa-regular fa-clock me-1"></i> 6 min read</span>
+                  <span><i class="fa-regular fa-calendar me-1"></i> Oct 12, 2025</span>
+                </div>
+                <h5 class="h6 mb-2"><a href="blog-details-styling.html" class="text-reset">What to Wear for Your Executive Headshot Session: A Stylist's Guide</a></h5>
+                <p class="small text-muted mb-3">Color theory, fabric textures, necklines, and contrast that flatter you under studio softboxes.</p>
+              </div>
+              <a href="blog-details-styling.html" class="btn btn-sm btn-glass align-self-start">Read Article <i class="fa-solid fa-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Post 3 -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
+          <div class="glass-card blog-card">
+            <div class="blog-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Camera Posing Techniques">
+              <span class="blog-category-badge">Studio Posing</span>
+            </div>
+            <div class="blog-body">
+              <div>
+                <div class="blog-meta">
+                  <span><i class="fa-regular fa-clock me-1"></i> 7 min read</span>
+                  <span><i class="fa-regular fa-calendar me-1"></i> Oct 08, 2025</span>
+                </div>
+                <h5 class="h6 mb-2"><a href="blog-details-posing.html" class="text-reset">How to Look Relaxed & Authentic in Front of the Camera</a></h5>
+                <p class="small text-muted mb-3">Simple breathing techniques and movement prompts to eliminate camera anxiety on your shoot.</p>
+              </div>
+              <a href="blog-details-posing.html" class="btn btn-sm btn-glass align-self-start">Read Article <i class="fa-solid fa-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CALL TO ACTION & NEWSLETTER BANNER
+       ========================================================================== -->
+  <section class="py-5">
+    <div class="container">
+      <div class="glass-card p-4 p-md-5 text-center position-relative overflow-hidden" data-aos="zoom-in">
+        <div class="ambient-blob blob-primary" style="top: -150px; left: 30%;"></div>
+        
+        <div class="position-relative z-1 max-w-700 mx-auto">
+          <span class="glass-pill mb-3"><i class="fa-solid fa-sparkles text-warning"></i> VIP Studio Priority</span>
+          <h2 class="h1 mb-3">Ready for Your Next Iconic Photo?</h2>
+          <p class="text-secondary mb-4">Walk-ins welcome for passport & ID photos. Schedule an online appointment to skip the line and get $5 off your session.</p>
+
+          <form class="needs-validation-custom d-flex flex-column flex-sm-row gap-2 justify-content-center max-w-500 mx-auto mb-3">
+            <input type="email" class="form-control form-control-glass py-3" placeholder="Enter your email for instant coupon..." required>
+            <button type="submit" class="btn btn-primary-gradient px-4 py-3 btn-shimmer text-nowrap">
+              <i class="fa-solid fa-paper-plane me-1"></i> Get $5 Coupon
+            </button>
+          </form>
+          <small class="text-muted">No spam. Unsubscribe anytime.</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-5 mb-5">
+        
+        <!-- Brand Info -->
+        <div class="col-lg-4">
+          <a href="index.html" class="brand-logo text-decoration-none flex-shrink-0">
+            <div class="brand-icon"><i class="fa-solid fa-camera-retro"></i></div>
+            <span>Lumina<span class="accent">Studio</span></span>
+          </a>
+          <p class="footer-brand-desc">
+            Premier photography studio specializing in certified biometric passport & visa photos, luxury executive portraits, and commercial advertising.
+          </p>
+          <div class="d-flex gap-2 mt-4">
+            <a href="#" class="social-circle-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-circle-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-circle-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="social-circle-link" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="social-circle-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h6 class="footer-heading">Services</h6>
+          <ul class="footer-links">
+            <li><a href="service-details.html">Passport Photos</a></li>
+            <li><a href="service-details.html">Visa Biometrics</a></li>
+            <li><a href="service-portrait.html">Executive Headshots</a></li>
+            <li><a href="service-wedding.html">Wedding Stories</a></li>
+            <li><a href="service-family.html">Family Portraits</a></li>
+            <li><a href="services.html">All 12 Services</a></li>
+          </ul>
+        </div>
+
+        <!-- Company Links -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h6 class="footer-heading">Company</h6>
+          <ul class="footer-links">
+            <li><a href="about.html">About Studio</a></li>
+            <li><a href="pricing.html">Pricing Matrix</a></li>
+            <li><a href="gallery.html">Proof Showcase</a></li>
+            <li><a href="blog.html">Photo Journal</a></li>
+            <li><a href="contact.html">Studio Locations</a></li>
+            <li><a href="coming-soon.html">VIP Access</a></li>
+          </ul>
+        </div>
+
+        <!-- Studio Hours & Location -->
+        <div class="col-lg-4">
+          <h6 class="footer-heading">Studio Visit & Hours</h6>
+          <div class="d-flex align-items-start gap-3 mb-3">
+            <i class="fa-solid fa-location-dot text-primary mt-1"></i>
+            <span class="small text-secondary">742 Evergreen Broadway, Suite 400, New York, NY 10012</span>
+          </div>
+          <div class="d-flex align-items-start gap-3 mb-3">
+            <i class="fa-solid fa-phone text-success mt-1"></i>
+            <span class="small text-secondary">+1 (800) 555-LUMINA / (212) 555-0199</span>
+          </div>
+          <div class="d-flex align-items-start gap-3">
+            <i class="fa-solid fa-clock text-warning mt-1"></i>
+            <div class="small text-secondary">
+              <div>Mon - Fri: 8:30 AM - 7:00 PM</div>
+              <div>Saturday: 9:00 AM - 6:00 PM (Walk-ins Welcome)</div>
+              <div>Sunday: 10:00 AM - 4:00 PM (By Appointment)</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="pt-4 border-top border-secondary border-opacity-10 d-flex flex-wrap justify-content-between align-items-center gap-3">
+        <span class="small text-muted">© 2026 LuminaStudio. All Rights Reserved. Commercial ThemeForest Standard.</span>
+        <div class="d-flex gap-3 small text-muted">
+          <a href="#" class="text-reset">Privacy Policy</a>
+          <a href="#" class="text-reset">Terms of Service</a>
+          <a href="#" class="text-reset">Biometric Compliance Guarantee</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MULTI-STEP BOOKING WIZARD MODAL
+       ========================================================================== -->
+  <div class="modal fade" id="bookingWizardModal" tabindex="-1" aria-labelledby="bookingWizardModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content glass-card border-0" style="background: var(--bg-surface-glass); backdrop-filter: blur(24px);">
+        
+        <div class="modal-header border-bottom border-secondary border-opacity-10">
+          <div class="d-flex align-items-center gap-2">
+            <div class="brand-icon" style="width: 32px; height: 32px; font-size: 0.9rem;"><i class="fa-solid fa-calendar-check"></i></div>
+            <h5 class="modal-title h5 mb-0" id="bookingWizardModalLabel">Schedule Studio Session</h5>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body p-4">
+          
+          <!-- Step Indicator -->
+          <div class="wizard-steps-indicator">
+            <div class="wizard-step-node active" data-step="1">1</div>
+            <div class="wizard-step-node" data-step="2">2</div>
+            <div class="wizard-step-node" data-step="3">3</div>
+            <div class="wizard-step-node" data-step="4">4</div>
+          </div>
+
+          <!-- STEP 1: SERVICE SELECTION -->
+          <div class="wizard-step-pane" data-step="1">
+            <h6 class="fw-bold text-primary mb-3">Step 1: Choose Your Photography Service</h6>
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <div class="wizard-card-option booking-service-card selected" data-service-name="Passport & Visa Photo" data-service-price="19.99">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <i class="fa-solid fa-passport text-primary fs-4"></i>
+                    <span class="badge bg-primary">$19.99</span>
+                  </div>
+                  <h6 class="mb-1">Passport & Visa Photos</h6>
+                  <small class="text-muted">15-min instant turnaround, physical & digital files.</small>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="wizard-card-option booking-service-card" data-service-name="Executive Headshot" data-service-price="89.00">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <i class="fa-solid fa-user-tie text-secondary fs-4"></i>
+                    <span class="badge bg-secondary">$89.00</span>
+                  </div>
+                  <h6 class="mb-1">Executive Headshot</h6>
+                  <small class="text-muted">30-min shoot, 3 retouched 4K portraits for LinkedIn.</small>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="wizard-card-option booking-service-card" data-service-name="Studio Portrait Session" data-service-price="199.00">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <i class="fa-solid fa-camera text-accent fs-4"></i>
+                    <span class="badge bg-info text-dark">$199.00</span>
+                  </div>
+                  <h6 class="mb-1">Creative Portrait Session</h6>
+                  <small class="text-muted">60-min shoot, multi-backdrop, 10 retouched photos.</small>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="wizard-card-option booking-service-card" data-service-name="Family & Milestone" data-service-price="149.00">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <i class="fa-solid fa-people-roof text-success fs-4"></i>
+                    <span class="badge bg-success">$149.00</span>
+                  </div>
+                  <h6 class="mb-1">Family & Milestone</h6>
+                  <small class="text-muted">Gentle newborn or family group studio memories.</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 2: DATE & TIME PICKER -->
+          <div class="wizard-step-pane d-none" data-step="2">
+            <h6 class="fw-bold text-primary mb-3">Step 2: Select Date & Time Slot</h6>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label small fw-bold">Select Date</label>
+                <input type="date" id="wizardDateInput" class="form-control form-control-glass" value="2026-08-08">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label small fw-bold">Select Time Slot</label>
+                <select id="wizardTimeInput" class="form-select form-select-glass">
+                  <option value="09:00 AM">09:00 AM - Morning Slot</option>
+                  <option value="10:30 AM" selected>10:30 AM - Prime Lighting</option>
+                  <option value="01:00 PM">01:00 PM - Afternoon</option>
+                  <option value="03:30 PM">03:30 PM - Afternoon</option>
+                  <option value="05:00 PM">05:00 PM - Evening</option>
+                </select>
+              </div>
+              <div class="col-12 mt-3">
+                <div class="p-3 glass-card bg-primary-light border-0">
+                  <div class="d-flex align-items-center gap-2 text-primary small fw-semibold">
+                    <i class="fa-solid fa-circle-info"></i> Walk-ins are also available anytime during business hours for passport photos!
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 3: ADD-ONS -->
+          <div class="wizard-step-pane d-none" data-step="3">
+            <h6 class="fw-bold text-primary mb-3">Step 3: Optional Studio Add-Ons</h6>
+            <div class="d-flex flex-column gap-3">
+              
+              <label class="wizard-card-option d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-3">
+                  <input type="checkbox" class="form-check-input wizard-addon-check" data-price="9.99">
+                  <div>
+                    <strong class="d-block text-primary">Official Biometric USB Drive</strong>
+                    <small class="text-muted">Pre-formatted digital files on encrypted studio flash drive.</small>
+                  </div>
+                </div>
+                <span class="fw-bold text-success">+$9.99</span>
+              </label>
+
+              <label class="wizard-card-option d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-3">
+                  <input type="checkbox" class="form-check-input wizard-addon-check" data-price="14.99">
+                  <div>
+                    <strong class="d-block text-primary">Extra 8 Archival Prints Pack</strong>
+                    <small class="text-muted">High-density smudge-proof lab photo paper.</small>
+                  </div>
+                </div>
+                <span class="fw-bold text-success">+$14.99</span>
+              </label>
+
+              <label class="wizard-card-option d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-3">
+                  <input type="checkbox" class="form-check-input wizard-addon-check" data-price="35.00">
+                  <div>
+                    <strong class="d-block text-primary">Professional Touch-Up Makeup Artist</strong>
+                    <small class="text-muted">15-min studio matte makeup anti-glare application before shoot.</small>
+                  </div>
+                </div>
+                <span class="fw-bold text-success">+$35.00</span>
+              </label>
+
+            </div>
+          </div>
+
+          <!-- STEP 4: CONTACT & REVIEW -->
+          <div class="wizard-step-pane d-none" data-step="4">
+            <h6 class="fw-bold text-primary mb-3">Step 4: Contact Information & Summary</h6>
+            
+            <div class="row g-3 mb-4">
+              <div class="col-sm-6">
+                <label class="form-label small fw-bold">Full Name *</label>
+                <input type="text" class="form-control form-control-glass" placeholder="Johnathan Doe" required>
+              </div>
+              <div class="col-sm-6">
+                <label class="form-label small fw-bold">Email Address *</label>
+                <input type="email" class="form-control form-control-glass" placeholder="john@example.com" required>
+              </div>
+              <div class="col-12">
+                <label class="form-label small fw-bold">Phone Number *</label>
+                <input type="tel" class="form-control form-control-glass" placeholder="+1 (555) 000-1234" required>
+              </div>
+            </div>
+
+            <!-- Summary Box -->
+            <div class="glass-card p-3 bg-surface-elevated">
+              <div class="d-flex justify-content-between mb-2">
+                <span class="text-muted">Selected Service:</span>
+                <strong id="sumServiceName" class="text-primary">Passport & Visa Photo</strong>
+              </div>
+              <div class="d-flex justify-content-between mb-2">
+                <span class="text-muted">Scheduled Slot:</span>
+                <span id="sumBookingDate" class="text-secondary">Tomorrow at 10:30 AM</span>
+              </div>
+              <div class="d-flex justify-content-between pt-2 border-top border-secondary border-opacity-10">
+                <span class="fw-bold text-primary">Estimated Total:</span>
+                <strong id="sumTotalAmount" class="h5 text-success mb-0">$19.99</strong>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="modal-footer border-top border-secondary border-opacity-10 d-flex justify-content-between">
+          <button type="button" id="wizardBtnPrev" class="btn btn-glass d-none"><i class="fa-solid fa-arrow-left me-1"></i> Back</button>
+          <div class="ms-auto d-flex gap-2">
+            <button type="button" class="btn btn-glass" data-bs-dismiss="modal">Cancel</button>
+            <button type="button" id="wizardBtnNext" class="btn btn-primary-gradient">Continue <i class="fa-solid fa-arrow-right ms-1"></i></button>
+            <button type="button" id="wizardBtnSubmit" class="btn btn-primary-gradient d-none"><i class="fa-solid fa-check me-1"></i> Confirm Booking</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FLOATING QUICK SETTINGS (THEME & RTL TOGGLES)
+       ========================================================================== -->
+
+  <!-- ==========================================================================
+       SCRIPTS
+       ========================================================================== -->
+  <!-- Mobile Offcanvas Menu -->
+  <div class="offcanvas offcanvas-start glass-card border-0" tabindex="-1" id="mobileMenuOffcanvas" style="background: var(--bg-surface-glass); backdrop-filter: blur(20px);">
+    <div class="offcanvas-header border-bottom border-secondary border-opacity-10">
+      <div class="brand-logo">
+        <div class="brand-icon"><i class="fa-solid fa-camera-retro"></i></div>
+        <span>Lumina<span class="accent">Studio</span></span>
+      </div>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav gap-2">
+        <li class="nav-item"><a class="nav-link active" href="index.html"><i class="fa-solid fa-house me-2 text-primary"></i> Home 1 - Classic Studio</a></li>
+        <li class="nav-item"><a class="nav-link" href="home-2.html"><i class="fa-solid fa-wand-magic-sparkles me-2 text-secondary"></i> Home 2 - SaaS</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html"><i class="fa-solid fa-users me-2 text-primary"></i> About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html"><i class="fa-solid fa-camera me-2 text-primary"></i> All Services Catalog</a></li>
+        <li class="nav-item"><a class="nav-link" href="service-details.html"><i class="fa-solid fa-id-card me-2 text-primary"></i> Passport & Visa Biometrics</a></li>
+        <li class="nav-item"><a class="nav-link" href="service-portrait.html"><i class="fa-solid fa-user-tie me-2 text-primary"></i> Executive Headshots</a></li>
+        <li class="nav-item"><a class="nav-link" href="service-wedding.html"><i class="fa-solid fa-ring me-2 text-primary"></i> Weddings & Engagements</a></li>
+        <li class="nav-item"><a class="nav-link" href="service-fashion.html"><i class="fa-solid fa-shirt me-2 text-primary"></i> Fashion & Lookbook</a></li>
+        <li class="nav-item"><a class="nav-link" href="service-family.html"><i class="fa-solid fa-people-roof me-2 text-primary"></i> Family & Newborn</a></li>
+        <li class="nav-item"><a class="nav-link" href="service-commercial.html"><i class="fa-solid fa-gem me-2 text-primary"></i> Commercial & Product</a></li>
+        <li class="nav-item"><a class="nav-link" href="pricing.html"><i class="fa-solid fa-tag me-2 text-primary"></i> Pricing Plans</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html"><i class="fa-solid fa-images me-2 text-primary"></i> Studio Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="testimonials.html"><i class="fa-solid fa-star me-2 text-warning"></i> Reviews & Testimonials</a></li>
+        <li class="nav-item"><a class="nav-link" href="faq.html"><i class="fa-solid fa-circle-question me-2 text-primary"></i> FAQ Help Center</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html"><i class="fa-solid fa-newspaper me-2 text-primary"></i> Blog & Insights</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fa-solid fa-envelope me-2 text-primary"></i> Contact Us</a></li>
+      </ul>
+      <div class="mt-4 pt-3 border-top border-secondary border-opacity-10 d-grid gap-2">
+        <a href="login.html" class="btn btn-sm btn-glass text-center"><i class="fa-solid fa-right-to-bracket me-2"></i> Client Login</a>
+        <button type="button" class="btn btn-sm btn-primary-gradient text-center" data-bs-toggle="modal" data-bs-target="#bookingWizardModal" data-bs-dismiss="offcanvas"><i class="fa-regular fa-calendar-check me-2"></i> Book Studio Session</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- AOS Animation JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- SwiperJS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- GSAP Core -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+  <!-- Master JavaScript Engine -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/auth.js"></script>
+
+</body>
+</html>

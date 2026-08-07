@@ -1,0 +1,70 @@
+:root {
+  --doc-primary: #6366f1;
+  --doc-dark: #0f172a;
+  --doc-bg: #f8fafc;
+  --doc-sidebar: #ffffff;
+  --doc-text: #334155;
+  --doc-border: #e2e8f0;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  color: var(--doc-text);
+  background-color: var(--doc-bg);
+  line-height: 1.6;
+}
+
+.doc-sidebar {
+  width: 280px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: var(--doc-sidebar);
+  border-right: 1px solid var(--doc-border);
+  padding: 2rem 1.5rem;
+  overflow-y: auto;
+}
+
+.doc-content {
+  margin-left: 280px;
+  padding: 3rem 4rem;
+  max-width: 1000px;
+}
+
+.doc-nav a {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  color: #64748b;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 6px;
+  margin-bottom: 0.25rem;
+  transition: all 0.2s ease;
+}
+
+.doc-nav a:hover, .doc-nav a.active {
+  color: var(--doc-primary);
+  background: #eef2ff;
+}
+
+.code-box {
+  background: #1e293b;
+  color: #f1f5f9;
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.85rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.badge-pill-custom {
+  background: #e0e7ff;
+  color: #4338ca;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}

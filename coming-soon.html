@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LuminaStudio 3.0 Platform is Launching Soon. Stay tuned for AI biometric automation.">
+  <title>Coming Soon | LuminaStudio Next-Gen</title>
+
+  <!-- Immediate Theme Initializer (Prevents FOUC / Dark Mode Flash) -->
+  <script>
+    (function() {
+      try {
+        var saved = window.location.protocol === 'file:' ? null : localStorage.getItem('lumina_theme');
+        var theme = saved || 'light';
+        var html = document.documentElement;
+        html.setAttribute('data-bs-theme', theme);
+        html.setAttribute('data-theme', theme);
+        if (theme === 'dark') document.documentElement.classList.add('dark-mode-pending');
+      } catch(e) {}
+    })();
+  </script>
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+
+  <!-- Google Fonts, Bootstrap 5, FontAwesome, AOS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body class="d-flex align-items-center justify-content-center min-vh-100 position-relative py-5">
+
+  <!-- Ambient Blobs -->
+  <div class="ambient-glow-wrapper">
+    <div class="ambient-blob blob-primary" style="top: 10%; right: 20%;"></div>
+    <div class="ambient-blob blob-secondary" style="bottom: 10%; left: 20%;"></div>
+  </div>
+
+  <div class="container text-center">
+    <div class="max-w-700 mx-auto" data-aos="fade-up">
+      
+      <a href="index.html" class="brand-logo text-decoration-none d-inline-flex justify-content-center mb-4">
+        <div class="brand-icon"><i class="fa-solid fa-camera-retro"></i></div>
+        <span>Lumina<span class="accent">Studio</span></span>
+      </a>
+
+      <span class="glass-pill mb-3"><i class="fa-solid fa-rocket text-primary"></i> Major Version Launch</span>
+      <h1 class="hero-title mt-2">Something Extraordinary is in Development</h1>
+      <p class="lead text-secondary mb-5">
+        We are launching our automated 24/7 AI biometric headshot & instant embassy passport verification platform.
+      </p>
+
+      <!-- Countdown Timer Box -->
+      <div class="glass-card p-4 p-md-5 mb-5 shadow-xl">
+        <div class="row g-3 text-center">
+          <div class="col-3">
+            <div class="display-4 fw-extrabold text-primary mb-0" id="countDays">48</div>
+            <small class="text-muted text-uppercase fw-bold">Days</small>
+          </div>
+          <div class="col-3">
+            <div class="display-4 fw-extrabold text-secondary mb-0" id="countHours">14</div>
+            <small class="text-muted text-uppercase fw-bold">Hours</small>
+          </div>
+          <div class="col-3">
+            <div class="display-4 fw-extrabold text-accent mb-0" id="countMinutes">32</div>
+            <small class="text-muted text-uppercase fw-bold">Minutes</small>
+          </div>
+          <div class="col-3">
+            <div class="display-4 fw-extrabold text-primary mb-0" id="countSeconds">50</div>
+            <small class="text-muted text-uppercase fw-bold">Seconds</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Newsletter Box -->
+      <div class="glass-card p-4 mb-4">
+        <h5 class="h6 text-primary mb-2">Be First to Get Early Access & 50% Off</h5>
+        <form class="needs-validation-custom d-flex flex-column flex-sm-row gap-2 mt-3">
+          <input type="email" class="form-control form-control-glass" placeholder="Enter your work email" required>
+          <button type="submit" class="btn btn-primary-gradient px-4 py-2 btn-shimmer flex-shrink-0">Notify Me</button>
+        </form>
+      </div>
+
+      <div class="d-flex justify-content-center gap-3">
+        <a href="#" class="social-circle-link"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" class="social-circle-link"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="social-circle-link"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Countdown Script -->
+  <script>
+    let d = 48, h = 14, m = 32, s = 50;
+    setInterval(() => {
+      s--;
+      if (s < 0) { s = 59; m--; }
+      if (m < 0) { m = 59; h--; }
+      if (h < 0) { h = 23; d--; }
+      const elS = document.getElementById('countSeconds');
+      const elM = document.getElementById('countMinutes');
+      const elH = document.getElementById('countHours');
+      const elD = document.getElementById('countDays');
+      if(elS) elS.innerText = s < 10 ? '0'+s : s;
+      if(elM) elM.innerText = m < 10 ? '0'+m : m;
+      if(elH) elH.innerText = h < 10 ? '0'+h : h;
+      if(elD) elD.innerText = d < 10 ? '0'+d : d;
+    }, 1000);
+  </script>
+
+  <!-- Floating Settings -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LuminaStudio Admin Portal - Studio management, analytics, user directory, booking orders, and client messages.">
+  <title>Admin Dashboard – Analytics, Users, Orders, Messages | LuminaStudio</title>
+
+  <!-- Immediate Theme Initializer (Prevents FOUC / Dark Mode Flash) -->
+  <script>
+    (function() {
+      try {
+        var saved = window.location.protocol === 'file:' ? null : localStorage.getItem('lumina_theme');
+        var theme = saved || 'light';
+        var html = document.documentElement;
+        html.setAttribute('data-bs-theme', theme);
+        html.setAttribute('data-theme', theme);
+        if (theme === 'dark') document.documentElement.classList.add('dark-mode-pending');
+      } catch(e) {}
+    })();
+  </script>
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+
+  <!-- Local Authorization Guard for Admin Console -->
+  <script>
+    (function() {
+      // file:// pages have isolated origins, so localStorage-based auth cannot
+      // be read reliably and redirecting from an embedded preview is blocked.
+      // Use the included HTTP server for authentication in normal use.
+      if (window.location.protocol === 'file:') return;
+
+      try {
+        const user = JSON.parse(localStorage.getItem('lumina_current_user') || 'null');
+        if (!user || user.role !== 'admin') {
+          sessionStorage.setItem('lumina_auth_redirect_msg', 'Access Restricted: Administrator authentication required to enter the Pro Console.');
+          window.location.replace('login.html?auth=admin_required');
+        }
+      } catch(e) {
+        window.location.replace('login.html?auth=admin_required');
+      }
+    })();
+  </script>
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Bootstrap 5 & Plugins CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  
+  <!-- Core Design System Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-body-custom">
+
+  <!-- Admin Top Navbar -->
+  <nav class="navbar admin-topbar" aria-label="Admin workspace header">
+    <div class="container-fluid px-lg-4 admin-topbar-inner">
+      <a class="admin-brand text-decoration-none" href="index.html" aria-label="Visit LuminaStudio public site">
+        <span class="admin-brand-mark"><i class="fa-solid fa-camera-retro"></i></span>
+        <span class="admin-brand-copy">
+          <span class="admin-brand-name">Lumina<span>Admin</span></span>
+          <span class="admin-brand-context"><i class="fa-solid fa-grid-2 me-1"></i> Studio workspace</span>
+        </span>
+        <span class="admin-console-badge">Pro Console</span>
+      </a>
+
+      <div class="admin-header-status d-none d-xl-inline-flex" title="System status: operational">
+        <span class="admin-status-dot"></span> All systems operational
+      </div>
+
+      <div class="admin-header-controls">
+        <a href="index.html" class="admin-header-action d-none d-sm-inline-flex" title="Return to Public Website">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i><span>View site</span>
+        </a>
+
+        <button type="button" class="admin-icon-button theme-toggle-btn" title="Toggle color theme" aria-label="Toggle color theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <button type="button" class="admin-icon-button rtl-toggle-btn" title="Toggle right-to-left layout" aria-label="Toggle right-to-left layout">
+          <i class="fa-solid fa-right-left"></i>
+        </button>
+
+        <span class="admin-header-divider d-none d-md-block" aria-hidden="true"></span>
+
+        <!-- Admin Profile Dropdown -->
+        <div class="dropdown user-header-dropdown d-inline-block">
+          <button class="admin-profile-trigger dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa-solid fa-circle-user" aria-hidden="true"></i>
+            <span class="admin-profile-meta d-none d-md-flex">
+              <span class="admin-profile-label">Administrator</span>
+              <span id="adminNavName">Sarah Jenkins</span>
+            </span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-glass shadow-lg py-2" style="min-width: 240px;">
+            <li class="px-3 py-2 border-bottom border-secondary border-opacity-10">
+              <div class="fw-bold text-primary" id="adminDropdownName">Sarah Jenkins</div>
+              <small class="text-muted d-block" id="adminDropdownEmail">admin@lumina.studio</small>
+              <span class="badge bg-warning text-dark mt-1" style="font-size: 0.65rem; text-transform: uppercase;">Super Admin</span>
+            </li>
+            <li>
+              <a class="dropdown-item py-2" href="index.html"><i class="fa-solid fa-globe me-2 text-info"></i> Visit Public Site</a>
+            </li>
+            <li><hr class="dropdown-divider border-secondary border-opacity-10 my-1"></li>
+            <li>
+              <a class="dropdown-item py-2 text-danger lumina-admin-logout-btn" href="javascript:void(0);">
+                <i class="fa-solid fa-right-from-bracket me-2"></i> Sign Out / Logout
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Admin Main Workspace -->
+  <main class="container-fluid px-lg-4" style="padding-top: 24px; padding-bottom: 60px;">
+    
+    <!-- Admin Header Banner -->
+    <div class="glass-card p-4 mb-4" data-aos="fade-up">
+      <div class="row align-items-center g-3">
+        <div class="col-lg-7">
+          <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill bg-primary-subtle text-primary border border-primary border-opacity-25 small mb-2">
+            <i class="fa-solid fa-shield-halved"></i> Live Management Environment
+          </div>
+          <h1 class="h3 fw-bold mb-1">
+            Welcome Back, <span class="text-primary" id="adminGreetingName">Administrator</span>
+          </h1>
+          <p class="text-secondary small mb-0">
+            Admin Master Control: Live monitoring for <strong>Analytics, Users, Orders & Messages</strong>.
+          </p>
+        </div>
+        <div class="col-lg-5 text-lg-end d-flex flex-wrap justify-content-lg-end gap-2">
+          <button type="button" class="btn btn-primary-gradient px-3 py-2" data-bs-toggle="modal" data-bs-target="#adminAddUserModal">
+            <i class="fa-solid fa-user-plus me-1"></i> Add User
+          </button>
+          <button type="button" class="btn btn-glass px-3 py-2" onclick="window.LuminaAdmin.switchTab('tab-orders')">
+            <i class="fa-solid fa-clipboard-list me-1"></i> View Orders
+          </button>
+          <button type="button" class="btn btn-glass px-3 py-2" onclick="window.LuminaAdmin.switchTab('tab-messages')">
+            <i class="fa-solid fa-envelope me-1"></i> Messages (<span id="adminQuickUnreadCount">0</span>)
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Stats Metric Cards -->
+    <div class="row g-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-6 col-md-6 col-xl-3">
+        <div class="glass-card admin-stat-card p-3 h-100">
+          <div class="d-flex justify-content-between align-items-start mb-2">
+            <span class="small text-muted fw-bold">TOTAL REVENUE</span>
+            <div class="badge bg-success-subtle text-success border border-success border-opacity-25"><i class="fa-solid fa-arrow-trend-up me-1"></i> +18.4%</div>
+          </div>
+          <div class="h3 fw-bold text-primary mb-1">$48,250.00</div>
+          <small class="text-muted"><i class="fa-regular fa-credit-card me-1"></i> 142 orders processed</small>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-6 col-xl-3">
+        <div class="glass-card admin-stat-card p-3 h-100">
+          <div class="d-flex justify-content-between align-items-start mb-2">
+            <span class="small text-muted fw-bold">BOOKINGS & ORDERS</span>
+            <span class="badge bg-primary" id="totalBookingsBadge">5 Total</span>
+          </div>
+          <div class="h3 fw-bold text-primary mb-1" id="totalOrdersCountDisplay">38 Sessions</div>
+          <small class="text-muted"><i class="fa-regular fa-calendar-check me-1"></i> Live sync from wizard</small>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-6 col-xl-3">
+        <div class="glass-card admin-stat-card p-3 h-100">
+          <div class="d-flex justify-content-between align-items-start mb-2">
+            <span class="small text-muted fw-bold">REGISTERED USERS</span>
+            <span class="badge bg-info-subtle text-info border border-info border-opacity-25" id="totalUsersCountBadge">4 Active</span>
+          </div>
+          <div class="h3 fw-bold text-primary mb-1" id="totalUsersCountDisplayCard">1,280 Clients</div>
+          <small class="text-muted"><i class="fa-solid fa-users me-1"></i> 94% retention rate</small>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-6 col-xl-3">
+        <div class="glass-card admin-stat-card p-3 h-100">
+          <div class="d-flex justify-content-between align-items-start mb-2">
+            <span class="small text-muted fw-bold">CLIENT MESSAGES</span>
+            <span class="badge bg-danger" id="adminHeaderMsgBadge">1 Unread</span>
+          </div>
+          <div class="h3 fw-bold text-primary mb-1" id="totalMessagesCountDisplay">12 Inquiries</div>
+          <small class="text-muted"><i class="fa-solid fa-envelope-open-text me-1"></i> Contact submissions</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- Admin Navigation 4 Primary Tabs -->
+    <div class="mb-4" data-aos="fade-up" data-aos-delay="150">
+      <ul class="nav admin-tab-nav" id="adminTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="tab-analytics-btn" data-bs-toggle="pill" data-bs-target="#tab-analytics" type="button" role="tab">
+            <i class="fa-solid fa-chart-pie"></i> Analytics
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="tab-users-btn" data-bs-toggle="pill" data-bs-target="#tab-users" type="button" role="tab">
+            <i class="fa-solid fa-users"></i> Users (<span id="adminTabUsersBadge">4</span>)
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="tab-orders-btn" data-bs-toggle="pill" data-bs-target="#tab-orders" type="button" role="tab">
+            <i class="fa-solid fa-clipboard-list"></i> Orders (<span id="adminTabOrdersBadge">5</span>)
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="tab-messages-btn" data-bs-toggle="pill" data-bs-target="#tab-messages" type="button" role="tab">
+            <i class="fa-solid fa-envelope"></i> Messages <span class="badge bg-danger ms-1" id="adminTabMessagesBadge">1</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Tab Content Panels -->
+    <div class="tab-content" id="adminTabsContent">
+      
+      <!-- ========================================================
+           TAB 1: ANALYTICS
+           ======================================================== -->
+      <div class="tab-pane fade show active" id="tab-analytics" role="tabpanel">
+        <div class="row g-4 mb-4">
+          
+          <!-- Monthly Bookings & Biometric Inquiries Chart -->
+          <div class="col-lg-8">
+            <div class="glass-card p-4 h-100">
+              <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+                <div>
+                  <h5 class="h6 text-primary fw-bold mb-1"><i class="fa-solid fa-chart-line me-2"></i> Monthly Studio Bookings & Growth</h5>
+                  <p class="small text-muted mb-0">Comparison of physical studio shoots vs biometric passport photo code generation</p>
+                </div>
+                <span class="badge bg-primary-subtle text-primary border border-primary border-opacity-25">2025/2026 Fiscal Season</span>
+              </div>
+              <div style="height: 320px; position: relative;">
+                <canvas id="adminBookingsChart"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <!-- Revenue Share by Service Tier -->
+          <div class="col-lg-4">
+            <div class="glass-card p-4 h-100 d-flex flex-column">
+              <h5 class="h6 text-primary fw-bold mb-1"><i class="fa-solid fa-chart-pie me-2"></i> Revenue Share by Service</h5>
+              <p class="small text-muted mb-3">Contribution of each photography tier to gross revenue</p>
+              <div style="height: 230px; position: relative;" class="my-auto">
+                <canvas id="adminRevenueCategoryChart"></canvas>
+              </div>
+              <div class="p-3 glass-card bg-primary-subtle border-primary border-opacity-25 rounded-3 mt-3">
+                <div class="d-flex align-items-center gap-2 mb-1">
+                  <i class="fa-solid fa-crown text-warning"></i>
+                  <span class="small fw-bold text-primary">Top Revenue Driver</span>
+                </div>
+                <p class="small text-muted mb-0">Executive Portraits deliver the highest margin ($249 average session value).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Studio Operational KPI Metrics -->
+        <div class="row g-3">
+          <div class="col-sm-6 col-lg-3">
+            <div class="glass-card p-3">
+              <div class="text-muted small fw-bold mb-1">AVG SESSION VALUE</div>
+              <div class="h4 text-primary fw-bold mb-0">$249.00</div>
+              <small class="text-success"><i class="fa-solid fa-arrow-up me-1"></i> +12% vs last quarter</small>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="glass-card p-3">
+              <div class="text-muted small fw-bold mb-1">PASSPORT COMPLIANCE</div>
+              <div class="h4 text-primary fw-bold mb-0">99.8% Pass Rate</div>
+              <small class="text-muted"><i class="fa-solid fa-check-double text-success me-1"></i> ICAO & HMPO Approved</small>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="glass-card p-3">
+              <div class="text-muted small fw-bold mb-1">CLIENT SATISFACTION</div>
+              <div class="h4 text-primary fw-bold mb-0">4.98 / 5.0</div>
+              <small class="text-warning"><i class="fa-solid fa-star me-1"></i> 580+ Verified Reviews</small>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="glass-card p-3">
+              <div class="text-muted small fw-bold mb-1">AVERAGE TURNAROUND</div>
+              <div class="h4 text-primary fw-bold mb-0">24 Hours</div>
+              <small class="text-info"><i class="fa-solid fa-bolt me-1"></i> Instant download available</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================================
+           TAB 2: USERS
+           ======================================================== -->
+      <div class="tab-pane fade" id="tab-users" role="tabpanel">
+        <div class="glass-card p-4">
+          
+          <!-- Search, Filters, and Add Button -->
+          <div class="row g-3 align-items-center justify-content-between mb-4">
+            <div class="col-md-5">
+              <div class="input-icon-group">
+                <i class="fa-solid fa-magnifying-glass icon-addon"></i>
+                <input type="text" id="adminUserSearch" class="form-control form-control-glass" placeholder="Search users by name, email, or role...">
+              </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+              <select id="adminUserRoleFilter" class="form-select form-control-glass">
+                <option value="all">Filter: All Roles</option>
+                <option value="customer">Clients / Customers</option>
+                <option value="admin">Administrators</option>
+              </select>
+            </div>
+            <div class="col-md-3 text-md-end">
+              <button type="button" class="btn btn-primary-gradient w-100 w-md-auto" data-bs-toggle="modal" data-bs-target="#adminAddUserModal">
+                <i class="fa-solid fa-user-plus me-1"></i> Add New User
+              </button>
+            </div>
+          </div>
+
+          <!-- Users Glass Table -->
+          <div class="table-responsive">
+            <table class="table table-glass align-middle mb-0">
+              <thead>
+                <tr>
+                  <th>USER PROFILE</th>
+                  <th>EMAIL ADDRESS</th>
+                  <th>ROLE</th>
+                  <th>PHONE</th>
+                  <th>STATUS</th>
+                  <th class="text-end">ACTIONS</th>
+                </tr>
+              </thead>
+              <tbody id="adminUsersTableBody">
+                <!-- Populated dynamically by admin.js from localStorage -->
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ========================================================
+           TAB 3: ORDERS & BOOKINGS
+           ======================================================== -->
+      <div class="tab-pane fade" id="tab-orders" role="tabpanel">
+        <div class="glass-card p-4">
+          
+          <!-- Search & Filter Controls -->
+          <div class="row g-3 align-items-center justify-content-between mb-4">
+            <div class="col-md-5">
+              <div class="input-icon-group">
+                <i class="fa-solid fa-magnifying-glass icon-addon"></i>
+                <input type="text" id="adminBookingSearch" class="form-control form-control-glass" placeholder="Search orders by Ref #, client name, or service...">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <select id="adminBookingStatusFilter" class="form-select form-control-glass">
+                <option value="all">Filter: All Order Statuses</option>
+                <option value="pending">Pending</option>
+                <option value="confirmed">Confirmed</option>
+                <option value="scheduled">Scheduled</option>
+                <option value="retouching">Retouching</option>
+                <option value="completed">Completed</option>
+                <option value="cancelled">Cancelled</option>
+              </select>
+            </div>
+            <div class="col-md-3 text-md-end">
+              <button type="button" class="btn btn-glass w-100 w-md-auto" onclick="window.LuminaAdmin.refreshOrders()">
+                <i class="fa-solid fa-rotate me-1"></i> Refresh Orders
+              </button>
+            </div>
+          </div>
+
+          <!-- Orders Glass Table -->
+          <div class="table-responsive">
+            <table class="table table-glass align-middle mb-0">
+              <thead>
+                <tr>
+                  <th>ORDER REF</th>
+                  <th>CLIENT INFO</th>
+                  <th>SERVICE & SCHEDULE</th>
+                  <th>PRICE</th>
+                  <th>UPDATE STATUS</th>
+                  <th>CURRENT STATUS</th>
+                  <th class="text-end">ACTIONS</th>
+                </tr>
+              </thead>
+              <tbody id="adminBookingsTableBody">
+                <!-- Populated dynamically by admin.js from localStorage -->
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ========================================================
+           TAB 4: MESSAGES & INQUIRIES
+           ======================================================== -->
+      <div class="tab-pane fade" id="tab-messages" role="tabpanel">
+        <div class="glass-card p-4">
+          
+          <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+            <div>
+              <h5 class="h6 text-primary fw-bold mb-1"><i class="fa-solid fa-envelope-open-text me-2"></i> Client Inquiries & Quote Requests</h5>
+              <p class="small text-muted mb-0">Synchronized live with Contact page form submissions</p>
+            </div>
+            <div class="d-flex gap-2">
+              <input type="text" id="adminMsgSearch" class="form-control form-control-glass form-control-sm" placeholder="Search messages..." style="max-width: 220px;">
+              <button type="button" class="btn btn-sm btn-glass" onclick="window.LuminaAdmin.markAllMessagesRead()">
+                <i class="fa-solid fa-check-double me-1"></i> Mark All Read
+              </button>
+            </div>
+          </div>
+
+          <div id="adminMessagesList">
+            <!-- Populated dynamically by admin.js from lumina_messages in localStorage -->
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- ========================================================
+       MODALS: ADD USER, VIEW PROFILE, VIEW INVOICE, REPLY
+       ======================================================== -->
+  
+  <!-- 1. Add New User Modal -->
+  <div class="modal fade" id="adminAddUserModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content glass-card border border-secondary border-opacity-25 shadow-lg">
+        <div class="modal-header border-bottom border-secondary border-opacity-15">
+          <h5 class="modal-title h6 fw-bold text-primary"><i class="fa-solid fa-user-plus me-2"></i> Register New User</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <form id="adminAddUserForm">
+          <div class="modal-body">
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Full Name</label>
+              <input type="text" id="newUserName" class="form-control form-control-glass" placeholder="e.g. Eleanor Vance" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Email Address</label>
+              <input type="email" id="newUserEmail" class="form-control form-control-glass" placeholder="client@domain.com" required>
+            </div>
+            <div class="row g-2 mb-3">
+              <div class="col-6">
+                <label class="form-label small fw-bold">Account Role</label>
+                <select id="newUserRole" class="form-select form-control-glass">
+                  <option value="customer" selected>Customer / Client</option>
+                  <option value="admin">Administrator</option>
+                </select>
+              </div>
+              <div class="col-6">
+                <label class="form-label small fw-bold">Phone Number</label>
+                <input type="tel" id="newUserPhone" class="form-control form-control-glass" placeholder="+1 (555) 000-0000">
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer border-top border-secondary border-opacity-15">
+            <button type="button" class="btn btn-glass" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-primary-gradient">Save User</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. View User Profile Modal -->
+  <div class="modal fade" id="adminUserProfileModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content glass-card border border-secondary border-opacity-25 shadow-lg">
+        <div class="modal-header border-bottom border-secondary border-opacity-15">
+          <h5 class="modal-title h6 fw-bold text-primary"><i class="fa-solid fa-address-card me-2"></i> User Profile Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body" id="adminUserProfileModalBody">
+          <!-- Populated dynamically -->
+        </div>
+        <div class="modal-footer border-top border-secondary border-opacity-15">
+          <button type="button" class="btn btn-glass" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. View Order Invoice Modal -->
+  <div class="modal fade" id="adminOrderInvoiceModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content glass-card border border-secondary border-opacity-25 shadow-lg">
+        <div class="modal-header border-bottom border-secondary border-opacity-15">
+          <h5 class="modal-title h6 fw-bold text-primary"><i class="fa-solid fa-receipt me-2"></i> Booking Invoice & Order Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-4" id="adminOrderInvoiceModalBody">
+          <!-- Populated dynamically -->
+        </div>
+        <div class="modal-footer border-top border-secondary border-opacity-15">
+          <button type="button" class="btn btn-glass" onclick="window.print()"><i class="fa-solid fa-print me-1"></i> Print Invoice</button>
+          <button type="button" class="btn btn-primary-gradient" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Reply to Message Modal -->
+  <div class="modal fade" id="adminReplyMessageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content glass-card border border-secondary border-opacity-25 shadow-lg">
+        <div class="modal-header border-bottom border-secondary border-opacity-15">
+          <h5 class="modal-title h6 fw-bold text-primary"><i class="fa-solid fa-reply me-2"></i> Compose Email Response</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <form id="adminReplyForm">
+          <div class="modal-body">
+            <input type="hidden" id="replyMsgId">
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Recipient</label>
+              <input type="text" id="replyRecipient" class="form-control form-control-glass" readonly>
+            </div>
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Subject</label>
+              <input type="text" id="replySubject" class="form-control form-control-glass" value="Re: LuminaStudio Photo Session Inquiry">
+            </div>
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Message Content</label>
+              <textarea id="replyContent" class="form-control form-control-glass" rows="4" placeholder="Type your message to the client..." required></textarea>
+            </div>
+          </div>
+          <div class="modal-footer border-top border-secondary border-opacity-15">
+            <button type="button" class="btn btn-glass" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-primary-gradient"><i class="fa-solid fa-paper-plane me-1"></i> Send Reply</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Controls -->
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/admin.js"></script>
+</body>
+</html>

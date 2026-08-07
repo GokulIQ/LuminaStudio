@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Read real reviews and verified testimonials from over 15,000 satisfied clients who trust LuminaStudio for passport photos, corporate portraits, and weddings.">
+  <title>Client Reviews & Testimonials | LuminaStudio</title>
+
+  <!-- Immediate Theme Initializer (Prevents FOUC / Dark Mode Flash) -->
+  <script>
+    (function() {
+      try {
+        var saved = window.location.protocol === 'file:' ? null : localStorage.getItem('lumina_theme');
+        var theme = saved || 'light';
+        var html = document.documentElement;
+        html.setAttribute('data-bs-theme', theme);
+        html.setAttribute('data-theme', theme);
+        if (theme === 'dark') document.documentElement.classList.add('dark-mode-pending');
+      } catch(e) {}
+    })();
+  </script>
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+
+  <!-- Google Fonts, Bootstrap 5, AOS, FontAwesome, Swiper -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <!-- Ambient Glows -->
+  <div class="ambient-glow-wrapper">
+    <div class="ambient-blob blob-primary"></div>
+    <div class="ambient-blob blob-accent"></div>
+    <div class="ambient-blob blob-secondary"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-glass-container d-flex align-items-center flex-nowrap justify-content-between">
+        
+        <a href="index.html" class="brand-logo text-decoration-none flex-shrink-0">
+          <div class="brand-icon"><i class="fa-solid fa-camera-retro"></i></div>
+          <span>Lumina<span class="accent">Studio</span></span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="navbar navbar-expand-lg p-0 d-none d-lg-flex flex-grow-1 justify-content-center px-lg-4">
+          <ul class="navbar-nav align-items-center">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Home</a>
+              <ul class="dropdown-menu dropdown-menu-glass">
+                <li><a class="dropdown-item" href="index.html"><i class="fa-solid fa-house-chimney"></i> Home 1 - Classic Studio</a></li>
+                <li><a class="dropdown-item" href="home-2.html"><i class="fa-solid fa-wand-magic-sparkles"></i> Home 2 - SaaS</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item dropdown position-static">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Services</a>
+              <div class="dropdown-menu dropdown-menu-glass mega-menu-container start-50 translate-middle-x">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <h6 class="fw-bold text-primary mb-3"><i class="fa-solid fa-passport me-2"></i>Biometric & Official</h6>
+                    <a href="service-details.html" class="mega-service-item text-decoration-none text-reset">
+                      <div class="mega-service-icon"><i class="fa-solid fa-id-card"></i></div>
+                      <div>
+                        <div class="fw-bold text-primary">Passport & Visa Photos</div>
+                        <small class="text-muted">US, UK, Schengen & 100+ countries with guarantee.</small>
+                      </div>
+                    </a>
+                    <a href="service-portrait.html" class="mega-service-item text-decoration-none text-reset mt-2">
+                      <div class="mega-service-icon"><i class="fa-solid fa-user-tie"></i></div>
+                      <div>
+                        <div class="fw-bold text-primary">Executive Headshots</div>
+                        <small class="text-muted">High-impact portraits for corporate leadership.</small>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-6">
+                    <h6 class="fw-bold text-secondary mb-3"><i class="fa-solid fa-film me-2"></i>Creative & Events</h6>
+                    <a href="service-wedding.html" class="mega-service-item text-decoration-none text-reset">
+                      <div class="mega-service-icon" style="background: var(--gradient-amber);"><i class="fa-solid fa-ring"></i></div>
+                      <div>
+                        <div class="fw-bold text-primary">Weddings & Engagements</div>
+                        <small class="text-muted">Cinematic love stories captured with natural emotion.</small>
+                      </div>
+                    </a>
+                    <a href="service-fashion.html" class="mega-service-item text-decoration-none text-reset mt-2">
+                      <div class="mega-service-icon" style="background: var(--gradient-accent);"><i class="fa-solid fa-shirt"></i></div>
+                      <div>
+                        <div class="fw-bold text-primary">Fashion & Commercial</div>
+                        <small class="text-muted">Editorial lookbooks and e-commerce campaigns.</small>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="mt-3 pt-3 border-top border-secondary border-opacity-10 d-flex justify-content-between align-items-center">
+                  <span class="small text-muted"><i class="fa-solid fa-bolt text-warning me-1"></i> Fast turnaround on all sessions</span>
+                  <a href="services.html" class="btn btn-sm btn-outline-glow">View All Services <i class="fa-solid fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+            <li class="nav-item dropdown position-static">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Pages
+              </a>
+              <div class="dropdown-menu dropdown-menu-glass mega-menu-container start-50 translate-middle-x">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <h6 class="fw-bold text-primary mb-3"><i class="fa-solid fa-compass me-2"></i>Discover & Learn</h6>
+                    <a href="gallery.html" class="mega-service-item text-decoration-none text-reset">
+                      <div class="mega-service-icon"><i class="fa-solid fa-images"></i></div>
+                      <div>
+                        <div class="fw-bold text-primary">Studio Gallery</div>
+                        <small class="text-muted">Explore our award-winning photography portfolio.</small>
+                      </div>
+                    </a>
+                    <a href="testimonials.html" class="mega-service-item text-decoration-none text-reset mt-2">
+                      <div class="mega-service-icon"><i class="fa-solid fa-star"></i></div>
+                      <div>
+                        <div class="fw-bold text-primary">Reviews & Testimonials</div>
+                        <small class="text-muted">See what our satisfied clients have to say.</small>
+                      </div>
+                    </a>
+                    <a href="blog.html" class="mega-service-item text-decoration-none text-reset mt-2">
+                      <div class="mega-service-icon"><i class="fa-solid fa-newspaper"></i></div>
+                      <div>
+                        <div class="fw-bold text-primary">Blog & Insights</div>
+                        <small class="text-muted">Read our latest studio news, tips, and articles.</small>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-6">
+                    <h6 class="fw-bold text-secondary mb-3"><i class="fa-solid fa-layer-group me-2"></i>Utility & Support</h6>
+                    <a href="faq.html" class="mega-service-item text-decoration-none text-reset">
+                      <div class="mega-service-icon" style="background: var(--gradient-amber);"><i class="fa-solid fa-circle-question"></i></div>
+                      <div>
+                        <div class="fw-bold text-primary">FAQ Help Center</div>
+                        <small class="text-muted">Find quick answers to common studio questions.</small>
+                      </div>
+                    </a>
+                    <a href="login.html" class="mega-service-item text-decoration-none text-reset mt-2">
+                      <div class="mega-service-icon" style="background: var(--gradient-accent);"><i class="fa-solid fa-right-to-bracket"></i></div>
+                      <div>
+                        <div class="fw-bold text-primary">Client Portal</div>
+                        <small class="text-muted">Login or register to manage your photo sessions.</small>
+                      </div>
+                    </a>
+                    <a href="404.html" class="mega-service-item text-decoration-none text-reset mt-2">
+                      <div class="mega-service-icon" style="background: linear-gradient(135deg, #64748b, #475569);"><i class="fa-solid fa-gear"></i></div>
+                      <div>
+                        <div class="fw-bold text-primary">System Pages</div>
+                        <small class="text-muted">404 Error, Coming Soon, and Maintenance layouts.</small>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Header Actions -->
+        <div class="d-flex align-items-center gap-2 flex-nowrap flex-shrink-0">
+          <button type="button" class="btn btn-sm btn-glass theme-toggle-btn" title="Toggle Theme"><i class="fa-solid fa-moon"></i></button>
+          <button type="button" class="btn btn-sm btn-glass rtl-toggle-btn" title="Toggle RTL"><i class="fa-solid fa-right-left"></i> <span class="d-none d-sm-inline">RTL</span></button>
+
+          <!-- Dynamic Auth Slot (Login/Register or Profile Dropdown) -->
+          <div id="luminaHeaderAuthSlot" class="d-inline-flex align-items-center">
+            <a href="login.html" class="btn btn-sm btn-glass d-none d-sm-inline-flex align-items-center gap-2">
+              <i class="fa-solid fa-arrow-right-to-bracket"></i>
+              <span>Login</span>
+            </a>
+          </div>
+
+<button type="button" class="btn btn-sm btn-primary-gradient d-none d-sm-inline-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#bookingWizardModal"> <i class="fa-regular fa-calendar-check"></i> <span>Book Session</span> </button>
+          <button class="btn btn-sm btn-glass d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenuOffcanvas"><i class="fa-solid fa-bars"></i></button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Banner -->
+  <section class="page-banner text-center position-relative">
+    <div class="container position-relative" style="z-index: 1;">
+      <span class="glass-pill mb-3" data-aos="fade-down"><i class="fa-solid fa-star text-warning"></i> 4.98 / 5.0 Star Rated</span>
+      <h1 class="display-4 fw-bold text-primary mb-3" data-aos="fade-up" data-aos-delay="100">Client Reviews & Testimonials</h1>
+      <p class="lead text-secondary mx-auto mb-4" style="max-width: 650px;" data-aos="fade-up" data-aos-delay="150">
+        Over 15,000 executives, world travelers, families, and creative agencies trust LuminaStudio for unmatched biometric precision and editorial portraiture.
+      </p>
+      <nav aria-label="breadcrumb" data-aos="fade-up" data-aos-delay="200">
+        <ol class="breadcrumb justify-content-center">
+          <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Testimonials</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Ratings Scoreboard -->
+  <section class="py-5">
+    <div class="container">
+      <div class="glass-card p-5 mb-5" data-aos="fade-up">
+        <div class="row align-items-center g-4 text-center text-md-start">
+          <div class="col-md-4 text-center border-end-md border-secondary border-opacity-10">
+            <h2 class="display-3 fw-bold text-primary mb-0">4.98</h2>
+            <div class="text-warning my-2 fs-5">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="small text-muted mb-0">Based on 1,420+ Verified Reviews on Google & Trustpilot</p>
+          </div>
+          <div class="col-md-8">
+            <div class="row g-3 text-center">
+              <div class="col-4">
+                <h4 class="h3 fw-bold text-success mb-1">100%</h4>
+                <p class="small text-muted mb-0">Embassy Acceptance</p>
+              </div>
+              <div class="col-4">
+                <h4 class="h3 fw-bold text-primary mb-1">15 Mins</h4>
+                <p class="small text-muted mb-0">Avg. Passport Session</p>
+              </div>
+              <div class="col-4">
+                <h4 class="h3 fw-bold text-secondary mb-1">99.4%</h4>
+                <p class="small text-muted mb-0">Client Delight Rate</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial Grid -->
+      <div class="row g-4 mb-5">
+        
+        <!-- Review 1 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up">
+          <div class="glass-card p-4 h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <div class="text-warning">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <span class="badge bg-success bg-opacity-10 text-success"><i class="fa-solid fa-check me-1"></i> Verified UK Passport</span>
+              </div>
+              <p class="text-secondary small mb-4">
+                "Needed a UK passport code and Canadian PR photo on extremely short notice. The team at Lumina had me in and out in 15 minutes. The digital code worked instantly on gov.uk with zero issues. Absolutely pristine service!"
+              </p>
+            </div>
+            <div class="d-flex align-items-center gap-3 pt-3 border-top border-secondary border-opacity-10">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" class="rounded-circle" style="width: 46px; height: 46px; object-fit: cover;" alt="Client review">
+              <div>
+                <h6 class="small fw-bold text-primary mb-0">Dr. Eleanor Vance</h6>
+                <small class="text-muted">Senior Research Fellow, Oxford</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="glass-card p-4 h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <div class="text-warning">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <span class="badge bg-primary bg-opacity-10 text-primary"><i class="fa-solid fa-wand-magic-sparkles me-1"></i> Executive Headshots</span>
+              </div>
+              <p class="text-secondary small mb-4">
+                "Our leadership team shot our annual Forbes and website executive headshots here. The lighting direction and subtle skin retouching were world-class. No plastic skin, just sharp, powerful portraits."
+              </p>
+            </div>
+            <div class="d-flex align-items-center gap-3 pt-3 border-top border-secondary border-opacity-10">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" class="rounded-circle" style="width: 46px; height: 46px; object-fit: cover;" alt="Client review">
+              <div>
+                <h6 class="small fw-bold text-primary mb-0">Marcus Sterling</h6>
+                <small class="text-muted">Managing Partner, Sterling Capital</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="glass-card p-4 h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <div class="text-warning">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <span class="badge bg-secondary bg-opacity-10 text-secondary"><i class="fa-solid fa-ring me-1"></i> Wedding Story</span>
+              </div>
+              <p class="text-secondary small mb-4">
+                "From our engagement session in Central Park to our full wedding gallery, Lumina captured every micro-emotion with breathtaking cinematic color. The online client portal made proofing effortless."
+              </p>
+            </div>
+            <div class="d-flex align-items-center gap-3 pt-3 border-top border-secondary border-opacity-10">
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=100&q=80" class="rounded-circle" style="width: 46px; height: 46px; object-fit: cover;" alt="Client review">
+              <div>
+                <h6 class="small fw-bold text-primary mb-0">Sophia & Julian Taylor</h6>
+                <small class="text-muted">Manhattan, NY</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 4 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up">
+          <div class="glass-card p-4 h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <div class="text-warning">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <span class="badge bg-success bg-opacity-10 text-success"><i class="fa-solid fa-check me-1"></i> US Visa DS-160</span>
+              </div>
+              <p class="text-secondary small mb-4">
+                "Had my visa photo rejected twice by drugstore kiosks. Came to LuminaStudio and they calibrated the exact 600x600 px head ratio. Passed the US consulate validation portal immediately. Worth every penny!"
+              </p>
+            </div>
+            <div class="d-flex align-items-center gap-3 pt-3 border-top border-secondary border-opacity-10">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" class="rounded-circle" style="width: 46px; height: 46px; object-fit: cover;" alt="Client review">
+              <div>
+                <h6 class="small fw-bold text-primary mb-0">Hiroshi Tanaka</h6>
+                <small class="text-muted">Global Logistics Director</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 5 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="glass-card p-4 h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <div class="text-warning">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <span class="badge bg-danger bg-opacity-10 text-danger"><i class="fa-solid fa-shirt me-1"></i> Fashion Lookbook</span>
+              </div>
+              <p class="text-secondary small mb-4">
+                "Shot our 50-piece sustainable fashion line in Lumina's infinity cyclorama studio. Turnaround was lightning fast, color-accurate for print and web, and our lookbook looks like Italian Vogue."
+              </p>
+            </div>
+            <div class="d-flex align-items-center gap-3 pt-3 border-top border-secondary border-opacity-10">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&q=80" class="rounded-circle" style="width: 46px; height: 46px; object-fit: cover;" alt="Client review">
+              <div>
+                <h6 class="small fw-bold text-primary mb-0">Camille Laurent</h6>
+                <small class="text-muted">Creative Director, Atelier Laurent</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 6 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="glass-card p-4 h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <div class="text-warning">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <span class="badge bg-warning bg-opacity-10 text-warning"><i class="fa-solid fa-baby me-1"></i> Infant Biometrics</span>
+              </div>
+              <p class="text-secondary small mb-4">
+                "Getting passport photos for a 4-month-old baby is usually a nightmare, but the photographers here had specialized white laying mats and patience. Got approved by the Australian embassy without a hitch!"
+              </p>
+            </div>
+            <div class="d-flex align-items-center gap-3 pt-3 border-top border-secondary border-opacity-10">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" class="rounded-circle" style="width: 46px; height: 46px; object-fit: cover;" alt="Client review">
+              <div>
+                <h6 class="small fw-bold text-primary mb-0">Rachel & Liam Davies</h6>
+                <small class="text-muted">Brooklyn, NY</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA Box -->
+      <div class="glass-card p-5 text-center position-relative overflow-hidden" data-aos="zoom-in">
+        <h3 class="display-6 fw-bold text-primary mb-3">Join 15,000+ Delighted Clients</h3>
+        <p class="text-secondary mx-auto mb-4" style="max-width: 600px;">
+          Experience the standard of portraiture and biometric precision that sets LuminaStudio apart.
+        </p>
+        <button type="button" class="btn btn-lg btn-primary-gradient px-4" data-bs-toggle="modal" data-bs-target="#bookingWizardModal">
+          <i class="fa-solid fa-calendar-check me-2"></i> Book Studio Session
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-5 mb-5">
+        
+        <!-- Brand Info -->
+        <div class="col-lg-4">
+          <a href="index.html" class="brand-logo text-decoration-none flex-shrink-0">
+            <div class="brand-icon"><i class="fa-solid fa-camera-retro"></i></div>
+            <span>Lumina<span class="accent">Studio</span></span>
+          </a>
+          <p class="footer-brand-desc">
+            Premier photography studio specializing in certified biometric passport & visa photos, luxury executive portraits, and commercial advertising.
+          </p>
+          <div class="d-flex gap-2 mt-4">
+            <a href="#" class="social-circle-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-circle-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-circle-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="social-circle-link" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="social-circle-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h6 class="footer-heading">Services</h6>
+          <ul class="footer-links">
+            <li><a href="service-details.html">Passport Photos</a></li>
+            <li><a href="service-details.html">Visa Biometrics</a></li>
+            <li><a href="service-portrait.html">Executive Headshots</a></li>
+            <li><a href="service-wedding.html">Wedding Stories</a></li>
+            <li><a href="service-family.html">Family Portraits</a></li>
+            <li><a href="services.html">All 12 Services</a></li>
+          </ul>
+        </div>
+
+        <!-- Company Links -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h6 class="footer-heading">Company</h6>
+          <ul class="footer-links">
+            <li><a href="about.html">About Studio</a></li>
+            <li><a href="pricing.html">Pricing Matrix</a></li>
+            <li><a href="gallery.html">Proof Showcase</a></li>
+            <li><a href="blog.html">Photo Journal</a></li>
+            <li><a href="contact.html">Studio Locations</a></li>
+            <li><a href="coming-soon.html">VIP Access</a></li>
+          </ul>
+        </div>
+
+        <!-- Studio Hours & Location -->
+        <div class="col-lg-4">
+          <h6 class="footer-heading">Studio Visit & Hours</h6>
+          <div class="d-flex align-items-start gap-3 mb-3">
+            <i class="fa-solid fa-location-dot text-primary mt-1"></i>
+            <span class="small text-secondary">742 Evergreen Broadway, Suite 400, New York, NY 10012</span>
+          </div>
+          <div class="d-flex align-items-start gap-3 mb-3">
+            <i class="fa-solid fa-phone text-success mt-1"></i>
+            <span class="small text-secondary">+1 (800) 555-LUMINA / (212) 555-0199</span>
+          </div>
+          <div class="d-flex align-items-start gap-3">
+            <i class="fa-solid fa-clock text-warning mt-1"></i>
+            <div class="small text-secondary">
+              <div>Mon - Fri: 8:30 AM - 7:00 PM</div>
+              <div>Saturday: 9:00 AM - 6:00 PM (Walk-ins Welcome)</div>
+              <div>Sunday: 10:00 AM - 4:00 PM (By Appointment)</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="pt-4 border-top border-secondary border-opacity-10 d-flex flex-wrap justify-content-between align-items-center gap-3">
+        <span class="small text-muted">© 2026 LuminaStudio. All Rights Reserved. Commercial ThemeForest Standard.</span>
+        <div class="d-flex gap-3 small text-muted">
+          <a href="#" class="text-reset">Privacy Policy</a>
+          <a href="#" class="text-reset">Terms of Service</a>
+          <a href="#" class="text-reset">Biometric Compliance Guarantee</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Floating Settings -->
+
+  <!-- Mobile Offcanvas Menu -->
+  <div class="offcanvas offcanvas-start glass-card border-0" tabindex="-1" id="mobileMenuOffcanvas" style="background: var(--bg-surface-glass); backdrop-filter: blur(20px);">
+    <div class="offcanvas-header border-bottom border-secondary border-opacity-10">
+      <div class="brand-logo">
+        <div class="brand-icon"><i class="fa-solid fa-camera-retro"></i></div>
+        <span>Lumina<span class="accent">Studio</span></span>
+      </div>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav gap-2">
+        <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa-solid fa-house me-2 text-primary"></i> Home 1 - Classic Studio</a></li>
+        <li class="nav-item"><a class="nav-link" href="home-2.html"><i class="fa-solid fa-wand-magic-sparkles me-2 text-secondary"></i> Home 2 - SaaS</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html"><i class="fa-solid fa-users me-2 text-primary"></i> About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html"><i class="fa-solid fa-camera me-2 text-primary"></i> All Services Catalog</a></li>
+        <li class="nav-item"><a class="nav-link" href="service-details.html"><i class="fa-solid fa-id-card me-2 text-primary"></i> Passport & Visa Biometrics</a></li>
+        <li class="nav-item"><a class="nav-link" href="service-portrait.html"><i class="fa-solid fa-user-tie me-2 text-primary"></i> Executive Headshots</a></li>
+        <li class="nav-item"><a class="nav-link" href="service-wedding.html"><i class="fa-solid fa-ring me-2 text-primary"></i> Weddings & Engagements</a></li>
+        <li class="nav-item"><a class="nav-link" href="service-fashion.html"><i class="fa-solid fa-shirt me-2 text-primary"></i> Fashion & Lookbook</a></li>
+        <li class="nav-item"><a class="nav-link" href="service-family.html"><i class="fa-solid fa-people-roof me-2 text-primary"></i> Family & Newborn</a></li>
+        <li class="nav-item"><a class="nav-link" href="service-commercial.html"><i class="fa-solid fa-gem me-2 text-primary"></i> Commercial & Product</a></li>
+        <li class="nav-item"><a class="nav-link" href="pricing.html"><i class="fa-solid fa-tag me-2 text-primary"></i> Pricing Plans</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html"><i class="fa-solid fa-images me-2 text-primary"></i> Studio Gallery</a></li>
+        <li class="nav-item"><a class="nav-link active" href="testimonials.html"><i class="fa-solid fa-star me-2 text-warning"></i> Reviews & Testimonials</a></li>
+        <li class="nav-item"><a class="nav-link" href="faq.html"><i class="fa-solid fa-circle-question me-2 text-primary"></i> FAQ Help Center</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html"><i class="fa-solid fa-newspaper me-2 text-primary"></i> Blog & Insights</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fa-solid fa-envelope me-2 text-primary"></i> Contact Us</a></li>
+      </ul>
+      <div class="mt-4 pt-3 border-top border-secondary border-opacity-10 d-grid gap-2">
+        <a href="login.html" class="btn btn-sm btn-glass text-center"><i class="fa-solid fa-right-to-bracket me-2"></i> Client Login</a>
+        <button type="button" class="btn btn-sm btn-primary-gradient text-center" data-bs-toggle="modal" data-bs-target="#bookingWizardModal" data-bs-dismiss="offcanvas"><i class="fa-regular fa-calendar-check me-2"></i> Book Studio Session</button>
+      </div>
+    </div>
+
+  <!-- Scripts -->
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/auth.js"></script>
+</body>
+</html>
