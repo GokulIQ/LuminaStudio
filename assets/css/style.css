@@ -2289,6 +2289,20 @@ body:not(.aos-init) [data-aos] {
     justify-content: center !important;
   }
 
+  /* Keep the full header inside narrow mobile viewports.  The desktop RTL
+     control is redundant here and previously pushed the menu button offscreen. */
+  .site-header .rtl-toggle-btn {
+    display: none !important;
+  }
+
+  .site-header .header-glass-container > .d-flex.align-items-center.gap-2 {
+    gap: 0.35rem !important;
+  }
+
+  .site-header #luminaHeaderAuthSlot {
+    margin: 0;
+  }
+
   .hero-section,
   .page-banner {
     padding-top: var(--hero-pt) !important;
