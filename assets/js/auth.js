@@ -570,6 +570,16 @@
       `;
     }
 
+    // Show / Hide the standalone Login header button based on auth state
+    const loginBtn = document.getElementById('luminaHeaderLoginBtn');
+    if (loginBtn) {
+      if (currentUser) {
+        loginBtn.style.display = 'none';
+      } else {
+        loginBtn.style.display = '';
+      }
+    }
+
     // Attach logout click handlers
     document.querySelectorAll('.lumina-logout-btn').forEach(btn => {
       btn.addEventListener('click', (e) => {
