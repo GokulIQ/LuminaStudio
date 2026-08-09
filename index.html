@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="light">
+<html lang="en" data-bs-theme="light" data-theme="light" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,18 +21,41 @@
     html[data-theme="dark"] body, html[data-bs-theme="dark"] body { background-color: #06090e !important; color: #cbd5e1; }
   </style>
   <!-- Immediate Theme Initializer (Prevents FOUC / Dark Mode Flash) -->
-  <script>
-    (function() {
-      try {
-        var saved = localStorage.getItem('lumina_theme');
-        var theme = saved || 'light';
-        var html = document.documentElement;
-        html.setAttribute('data-bs-theme', theme);
-        html.setAttribute('data-theme', theme);
-        if (theme === 'dark') document.documentElement.classList.add('dark-mode-pending');
-      } catch(e) {}
-    })();
-  </script>
+<script>
+(function () {
+    try {
+        const html = document.documentElement;
+
+        /* =========================
+           THEME
+        ========================= */
+        const savedTheme =
+            localStorage.getItem('lumina_theme') || 'dark';
+
+        html.setAttribute('data-bs-theme', savedTheme);
+        html.setAttribute('data-theme', savedTheme);
+
+        if (savedTheme === 'dark') {
+            html.classList.add('dark-mode-pending');
+        }
+
+        /* =========================
+           RTL
+        ========================= */
+        const savedRtl =
+            localStorage.getItem('lumina_rtl') === 'true';
+
+        if (savedRtl) {
+            html.setAttribute('dir', 'rtl');
+        } else {
+            html.setAttribute('dir', 'ltr');
+        }
+
+    } catch (error) {
+        console.warn('Theme/RTL initialization error:', error);
+    }
+})();
+</script>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -58,6 +81,8 @@
   <link rel="stylesheet" href="assets/css/rtl.css">
 </head>
 <body>
+
+  
 
   <!-- Top Scroll Reading Progress Line -->
   <div class="scroll-progress-bar"></div>
@@ -155,7 +180,7 @@
             
             <li class="nav-item dropdown position-static">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Pages
+                Explore
               </a>
               <div class="dropdown-menu dropdown-menu-glass mega-menu-container start-50 translate-middle-x">
                 <div class="row g-3">
@@ -1104,11 +1129,11 @@
             Premier photography studio specializing in certified biometric passport & visa photos, luxury executive portraits, and commercial advertising.
           </p>
           <div class="d-flex gap-2 mt-4">
-            <a href="#" class="social-circle-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" class="social-circle-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#" class="social-circle-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="#" class="social-circle-link" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="#" class="social-circle-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.instagram.com/luminastudio" class="social-circle-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/luminastudio" class="social-circle-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/company/luminastudio" class="social-circle-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/luminastudio" class="social-circle-link" aria-label="Twitter/X" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.youtube.com/@luminastudio" class="social-circle-link" aria-label="YouTube" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
           </div>
         </div>
 

@@ -606,63 +606,150 @@ document.addEventListener('DOMContentLoaded', () => {
     portfolioSearchInput.addEventListener('input', filterPortfolio);
   }
 
-  /* ==========================================================================
-     8. FORM VALIDATION ENGINE & TOAST NOTIFICATIONS
-     ========================================================================== */
-  const forms = document.querySelectorAll('.needs-validation-custom');
+/* ==========================================================================
+8. FORM VALIDATION ENGINE & TOAST NOTIFICATIONS
+========================================================================== */
 
-  forms.forEach(form => {
+/*
+ * IMPORTANT:
+ * Login form is handled by auth.js.
+ * Do NOT attach the generic form success handler to #loginForm.
+ */
+
+const forms = document.querySelectorAll(
+    '.needs-validation-custom:not(#loginForm)'
+);
+
+forms.forEach(form => {
+
     form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      let isValid = true;
-      const submitBtn = form.querySelector('button[type="submit"]');
 
-      const requiredInputs = form.querySelectorAll('[required]');
-      requiredInputs.forEach(input => {
-        if (!input.value.trim()) {
-          input.classList.add('is-invalid');
-          isValid = false;
-        } else {
-          if (input.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value)) {
-            input.classList.add('is-invalid');
-            isValid = false;
-          } else {
-            input.classList.remove('is-invalid');
-            input.classList.add('is-valid');
-          }
+        e.preventDefault();
+
+        let isValid = true;
+
+        const submitBtn = form.querySelector(
+            'button[type="submit"]'
+        );
+
+        const requiredInputs = form.querySelectorAll('[required]');
+
+        requiredInputs.forEach(input => {
+
+            if (!input.value.trim()) {
+
+                input.classList.add('is-invalid');
+                input.classList.remove('is-valid');
+
+                isValid = false;
+
+            } else {
+
+                if (
+                    input.type === 'email' &&
+                    !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value)
+                ) {
+
+                    input.classList.add('is-invalid');
+                    input.classList.remove('is-valid');
+
+                    isValid = false;
+
+                } else {
+
+                    input.classList.remove('is-invalid');
+                    input.classList.add('is-valid');
+
+                }
+
+            }
+
+        });
+
+        const passwordInput =
+            form.querySelector('#regPassword');
+
+        const confirmInput =
+            form.querySelector('#regConfirmPassword');
+
+        if (passwordInput && confirmInput) {
+
+            if (passwordInput.value !== confirmInput.value) {
+
+                confirmInput.classList.add('is-invalid');
+                confirmInput.classList.remove('is-valid');
+
+                isValid = false;
+
+            }
+
         }
-      });
 
-      const passwordInput = form.querySelector('#regPassword');
-      const confirmInput = form.querySelector('#regConfirmPassword');
-      if (passwordInput && confirmInput) {
-        if (passwordInput.value !== confirmInput.value) {
-          confirmInput.classList.add('is-invalid');
-          isValid = false;
+        /* ==============================
+           INVALID FORM
+        ============================== */
+
+        if (!isValid) {
+
+            showToast(
+                'Validation Error',
+                'Please check highlighted fields and try again.',
+                'danger'
+            );
+
+            return;
         }
-      }
 
-      if (isValid) {
-        const originalBtnText = submitBtn ? submitBtn.innerHTML : 'Submit';
+
+        /* ==============================
+           VALID NORMAL FORM
+        ============================== */
+
+        const originalBtnText =
+            submitBtn ? submitBtn.innerHTML : 'Submit';
+
         if (submitBtn) {
-          submitBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Processing...';
-          submitBtn.disabled = true;
+
+            submitBtn.innerHTML =
+                '<i class="fa-solid fa-circle-notch fa-spin"></i> Processing...';
+
+            submitBtn.disabled = true;
+
         }
 
         setTimeout(() => {
-          if (submitBtn) {
-            submitBtn.innerHTML = originalBtnText;
-            submitBtn.disabled = false;
-          }
-          form.reset();
-          form.querySelectorAll('.is-valid, .is-invalid').forEach(el => el.classList.remove('is-valid', 'is-invalid'));
-          showToast('Success!', 'Your submission was received successfully.', 'success');
+
+            if (submitBtn) {
+
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
+
+            }
+
+            form.reset();
+
+            form.querySelectorAll(
+                '.is-valid, .is-invalid'
+            ).forEach(el => {
+
+                el.classList.remove(
+                    'is-valid',
+                    'is-invalid'
+                );
+
+            });
+
+            showToast(
+                'Success!',
+                'Your submission was received successfully.',
+                'success'
+            );
+
         }, 1200);
-      } else {
-        showToast('Validation Error', 'Please check highlighted fields and try again.', 'danger');
-      }
+
     });
-  });
+
+});
 
   // Password Strength Indicator
   const regPassword = document.getElementById('regPassword');
@@ -852,3 +939,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 });
+

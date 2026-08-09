@@ -357,79 +357,182 @@
     });
   }
 
-  // 4. Login Page Handler
-  function initLoginPage() {
+// 4. Login Page Handler
+function initLoginPage() {
     const loginForm = document.getElementById('loginForm');
     if (!loginForm) return;
 
-    // Check if redirected due to unauthorized admin access
-    const redirectMsg = sessionStorage.getItem('lumina_auth_redirect_msg');
-    if (redirectMsg) {
-      showToast(redirectMsg, 'danger');
-      sessionStorage.removeItem('lumina_auth_redirect_msg');
-    }
-
-    // Check if redirected after registration
-    const urlParams = new URLSearchParams(window.location.search);
-    const tempEmail = safeGetItem('lumina_temp_login_email');
     const emailInput = document.getElementById('loginEmail');
     const passInput = document.getElementById('loginPassword');
 
-    if (urlParams.get('registered') === 'true' && tempEmail && emailInput) {
-      emailInput.value = tempEmail;
-      showToast('Registration successful! Please enter your password to sign in.', 'success');
-      safeRemoveItem('lumina_temp_login_email');
-      if (passInput) passInput.focus();
+    // Prevent main.js generic form validation from handling the login form
+    loginForm.classList.remove('needs-validation-custom');
+
+    // ============================================================
+    // Unauthorized admin redirect message
+    // ============================================================
+    const redirectMsg = sessionStorage.getItem('lumina_auth_redirect_msg');
+
+    if (redirectMsg) {
+        showToast(redirectMsg, 'danger');
+        sessionStorage.removeItem('lumina_auth_redirect_msg');
     }
 
-    // Standard Submit Form
+    // ============================================================
+    // Registration redirect
+    // ============================================================
+    const urlParams = new URLSearchParams(window.location.search);
+    const tempEmail = safeGetItem('lumina_temp_login_email');
+
+    if (
+        urlParams.get('registered') === 'true' &&
+        tempEmail &&
+        emailInput
+    ) {
+        emailInput.value = tempEmail;
+
+        showToast(
+            'Registration successful! Please enter your password to sign in.',
+            'success'
+        );
+
+        safeRemoveItem('lumina_temp_login_email');
+
+        if (passInput) {
+            passInput.focus();
+        }
+    }
+
+    // ============================================================
+    // Login Submit
+    // ============================================================
     loginForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const email = emailInput?.value.trim().toLowerCase();
-      const password = passInput?.value;
+        e.preventDefault();
+        e.stopPropagation();
 
-      if (!email || !password) {
-        showToast('Please enter both email and password.', 'danger');
-        return;
-      }
+        const email = emailInput?.value.trim().toLowerCase() || '';
+        const password = passInput?.value || '';
 
-      const users = JSON.parse(safeGetItem('lumina_users') || '[]');
-      const user = users.find(u => u.email.toLowerCase() === email);
+        // Remove previous validation states
+        emailInput?.classList.remove('is-invalid');
+        passInput?.classList.remove('is-invalid');
 
-      if (!user || user.password !== password) {
-        // Fallback for default seed accounts
-        if (email === 'admin@lumina.studio' && (password === 'admin' || password === 'admin123')) {
-          safeSetItem('lumina_current_user', JSON.stringify(DEFAULT_USERS[0]));
-          showToast('Welcome back, Admin Sarah!', 'success');
-          setTimeout(() => window.location.href = 'admin-dashboard.html', 800);
-          return;
-        } else if (email === 'alex@creative.io' && (password === 'password123' || password === 'alex')) {
-          safeSetItem('lumina_current_user', JSON.stringify(DEFAULT_USERS[1]));
-          showToast('Welcome back, Alex!', 'success');
-          setTimeout(() => window.location.replace('index.html'), 800);
-          return;
+        // ========================================================
+        // Empty field validation
+        // ========================================================
+        if (!email || !password) {
+
+            if (!email) {
+                emailInput?.classList.add('is-invalid');
+            }
+
+            if (!password) {
+                passInput?.classList.add('is-invalid');
+            }
+
+            showToast(
+                'Please enter both email and password.',
+                'danger'
+            );
+
+            return;
         }
 
-        showToast('Invalid email or password. Please check your credentials.', 'danger');
-        loginForm.classList.add('animate-shake');
-        setTimeout(() => loginForm.classList.remove('animate-shake'), 600);
-        return;
-      }
+        // ========================================================
+        // Get users from LocalStorage
+        // ========================================================
+        let users = [];
 
-      // Success
-      safeSetItem('lumina_current_user', JSON.stringify(user));
-      showToast(`Welcome back, ${user.name}!`, 'success');
+        try {
+            users = JSON.parse(
+                safeGetItem('lumina_users') || '[]'
+            );
+        } catch (error) {
+            console.error(
+                'LuminaStudio: Unable to read users from LocalStorage.',
+                error
+            );
 
-      setTimeout(() => {
-        if (user.role === 'admin') {
-          window.location.replace('admin-dashboard.html');
-        } else {
-          // Customer login always lands on the public home page.
-          window.location.replace('index.html');
+            showToast(
+                'Unable to access account data. Please try again.',
+                'danger'
+            );
+
+            return;
         }
-      }, 800);
+
+        // ========================================================
+        // Find user
+        // ========================================================
+        const user = users.find(
+            u =>
+                u.email &&
+                String(u.email).toLowerCase() === email
+        );
+
+        // ========================================================
+        // Invalid credentials
+        // ========================================================
+        if (!user || user.password !== password) {
+
+            emailInput?.classList.add('is-invalid');
+            passInput?.classList.add('is-invalid');
+
+            showToast(
+                'Invalid email or password. Please check your credentials.',
+                'danger'
+            );
+
+            // Login shake animation
+            loginForm.classList.remove('animate-shake');
+
+            // Force browser reflow so animation can restart
+            void loginForm.offsetWidth;
+
+            loginForm.classList.add('animate-shake');
+
+            setTimeout(() => {
+                loginForm.classList.remove('animate-shake');
+            }, 600);
+
+            return;
+        }
+
+        // ========================================================
+        // Successful Login
+        // ========================================================
+        safeSetItem(
+            'lumina_current_user',
+            JSON.stringify(user)
+        );
+
+        // Clear validation states
+        emailInput?.classList.remove('is-invalid');
+        passInput?.classList.remove('is-invalid');
+
+        showToast(
+            `Welcome back, ${user.name}!`,
+            'success'
+        );
+
+        // ========================================================
+        // Redirect based on role
+        // ========================================================
+        setTimeout(() => {
+
+            if (user.role === 'admin') {
+                window.location.replace(
+                    'admin-dashboard.html'
+                );
+            } else {
+                window.location.replace(
+                    'index.html'
+                );
+            }
+
+        }, 800);
     });
-  }
+}
 
   // 5. Contact Form Handler (Persists to localStorage lumina_messages)
   function initContactForm() {

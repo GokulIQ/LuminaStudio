@@ -40,6 +40,32 @@
 </head>
 <body class="d-flex align-items-center justify-content-center min-vh-100 position-relative py-5">
 
+<!-- Top Right Controls -->
+<div class="login-page-controls">
+
+    <!-- Theme -->
+    <button
+        type="button"
+        class="control-btn theme-toggle-btn"
+        title="Toggle Dark/Light Mode"
+        aria-label="Toggle Theme"
+    >
+        <i class="fa-solid fa-moon"></i>
+    </button>
+
+    <!-- RTL -->
+    <button
+        type="button"
+        class="control-btn rtl-toggle-btn"
+        title="Toggle RTL Layout"
+        aria-label="Toggle RTL"
+    >
+        <i class="fa-solid fa-right-left"></i>
+        <span>RTL</span>
+    </button>
+
+</div>
+
   <!-- Ambient Glows -->
   <div class="ambient-glow-wrapper">
     <div class="ambient-blob blob-primary" style="top: 10%; left: 20%;"></div>
@@ -98,14 +124,21 @@
               <span class="small text-muted bg-surface px-2 position-relative" style="top: -10px; background: var(--bg-surface-glass);">or continue with</span>
             </div>
 
-            <div class="row g-2 mb-4">
-              <div class="col-6">
-                <a href="index.html" class="btn btn-glass w-100 btn-sm py-2"><i class="fa-brands fa-google text-danger me-1"></i> Google</a>
-              </div>
-              <div class="col-6">
-                <a href="index.html" class="btn btn-glass w-100 btn-sm py-2"><i class="fa-brands fa-apple text-dark me-1"></i> Apple</a>
-              </div>
-            </div>
+      <div class="row g-2 mb-4">
+        <div class="col-6">
+          <button type="button" id="googleLoginBtn" class="btn btn-glass w-100 btn-sm py-2">
+            <i class="fa-brands fa-google text-danger me-1"></i>
+            Google
+          </button>
+        </div>
+
+        <div class="col-6">
+          <button type="button" id="appleLoginBtn" class="btn btn-glass w-100 btn-sm py-2">
+            <i class="fa-brands fa-apple me-1"></i>
+            Apple
+          </button>
+        </div>
+      </div>
 
             <div class="text-center small text-muted">
               Don't have an account yet? <a href="register.html" class="text-primary fw-bold text-decoration-none">Create Account</a>
