@@ -673,15 +673,27 @@ function initLoginPage() {
       `;
     }
 
-    // Show / Hide the standalone Login header button based on auth state
-    const loginBtn = document.getElementById('luminaHeaderLoginBtn');
-    if (loginBtn) {
+// Target ALL login buttons (Desktop header, Mobile menu, and duplicates)
+    const loginBtns = document.querySelectorAll('#luminaHeaderLoginBtn, .offcanvas-body a[href="login.html"]');
+
+    loginBtns.forEach(btn => {
       if (currentUser) {
-        loginBtn.style.display = 'none';
+        // 1. Force inline style with !important
+        btn.setAttribute('style', 'display: none !important;');
+        // 2. Add standard Bootstrap hide class
+        btn.classList.add('d-none');
+        // 3. CRUCIAL: Remove Bootstrap responsive flex classes that override hidden states
+        btn.classList.remove('d-sm-inline-flex', 'd-inline-flex', 'd-flex', 'd-block');
       } else {
-        loginBtn.style.display = '';
+        // Restore visibility if the user logs out
+        btn.removeAttribute('style');
+        btn.classList.remove('d-none');
+        // Add back the responsive flex class for the main header button
+        if (btn.id === 'luminaHeaderLoginBtn') {
+          btn.classList.add('d-sm-inline-flex');
+        }
       }
-    }
+    });
 
     // Attach logout click handlers
     document.querySelectorAll('.lumina-logout-btn').forEach(btn => {
