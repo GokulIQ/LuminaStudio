@@ -687,10 +687,11 @@ function initLoginPage() {
       } else {
         // Restore visibility if the user logs out
         btn.removeAttribute('style');
-        btn.classList.remove('d-none');
         // Add back the responsive flex class for the main header button
         if (btn.id === 'luminaHeaderLoginBtn') {
-          btn.classList.add('d-sm-inline-flex');
+          btn.classList.add('d-none', 'd-sm-inline-flex');
+        } else {
+          btn.classList.remove('d-none');
         }
       }
     });

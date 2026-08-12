@@ -242,8 +242,7 @@
           </button> -->
 
           <!-- Mobile Nav Toggle -->
-          <button class="btn btn-sm btn-glass d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenuOffcanvas" aria-label="Open Mobile Menu">
-            <i class="fa-solid fa-bars"></i>
+<button class="btn btn-sm btn-glass d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenuOffcanvas" aria-label="Open Mobile Menu"><i class="fa-solid fa-bars"></i></button>
           </button>
         </div>
 
@@ -575,6 +574,45 @@
     </div>
   </div>
 
+  <!-- Mobile Offcanvas Menu -->
+  <div class="offcanvas offcanvas-start glass-card border-0" tabindex="-1" id="mobileMenuOffcanvas" style="background: var(--bg-surface-glass); backdrop-filter: blur(20px);">
+    <div class="offcanvas-header border-bottom border-secondary border-opacity-10">
+      <div class="brand-logo">
+        <div class="brand-icon"><i class="fa-solid fa-camera-retro"></i></div>
+        <span>Lumina<span class="accent">Studio</span></span>
+      </div>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav gap-2">
+        <li class="nav-item"><a class="nav-link active" href="index.html"><i class="fa-solid fa-house me-2 text-primary"></i> Home 1 - Classic Studio</a></li>
+        <li class="nav-item"><a class="nav-link" href="home-2.html"><i class="fa-solid fa-wand-magic-sparkles me-2 text-secondary"></i> Home 2 - SaaS</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html"><i class="fa-solid fa-users me-2 text-primary"></i> About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html"><i class="fa-solid fa-camera me-2 text-primary"></i> All Services Catalog</a></li>
+        <li class="nav-item"><a class="nav-link" href="service-details.html"><i class="fa-solid fa-id-card me-2 text-primary"></i> Passport & Visa Biometrics</a></li>
+        <li class="nav-item"><a class="nav-link" href="service-portrait.html"><i class="fa-solid fa-user-tie me-2 text-primary"></i> Executive Headshots</a></li>
+        <li class="nav-item"><a class="nav-link" href="service-wedding.html"><i class="fa-solid fa-ring me-2 text-primary"></i> Weddings & Engagements</a></li>
+        <li class="nav-item"><a class="nav-link" href="service-fashion.html"><i class="fa-solid fa-shirt me-2 text-primary"></i> Fashion & Lookbook</a></li>
+        <li class="nav-item"><a class="nav-link" href="service-family.html"><i class="fa-solid fa-people-roof me-2 text-primary"></i> Family & Newborn</a></li>
+        <li class="nav-item"><a class="nav-link" href="service-commercial.html"><i class="fa-solid fa-gem me-2 text-primary"></i> Commercial & Product</a></li>
+        <li class="nav-item"><a class="nav-link" href="pricing.html"><i class="fa-solid fa-tag me-2 text-primary"></i> Pricing Plans</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html"><i class="fa-solid fa-images me-2 text-primary"></i> Studio Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="testimonials.html"><i class="fa-solid fa-star me-2 text-warning"></i> Reviews & Testimonials</a></li>
+        <li class="nav-item"><a class="nav-link" href="faq.html"><i class="fa-solid fa-circle-question me-2 text-primary"></i> FAQ Help Center</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html"><i class="fa-solid fa-newspaper me-2 text-primary"></i> Blog & Insights</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fa-solid fa-envelope me-2 text-primary"></i> Contact Us</a></li>
+      </ul>
+     <div class="mt-4 pt-3 border-top border-secondary border-opacity-10 d-grid gap-2">
+        <div class="d-flex gap-2"><a href="login.html" class="btn btn-sm btn-glass text-center flex-grow-1"><i class="fa-solid fa-right-to-bracket me-2"></i> Login</a><a href="register.html" class="btn btn-sm btn-primary-gradient btn-shimmer text-center flex-grow-1"><i class="fa-solid fa-user-plus me-2"></i> Sign Up</a></div>
+         <a href="login.html" id="luminaHeaderLoginBtn" class="btn btn-sm btn-glass d-none d-sm-inline-flex align-items-center gap-2">
+            <i class="fa-solid fa-right-to-bracket"></i>
+            <span>Login</span>
+        </a>
+        <!-- <button type="button" class="btn btn-sm btn-primary-gradient text-center" data-bs-toggle="modal" data-bs-target="#bookingWizardModal" data-bs-dismiss="offcanvas"><i class="fa-regular fa-calendar-check me-2"></i> Book Studio Session</button> -->
+      </div>
+    </div>
+  </div>
+
   <!-- Global Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
@@ -584,3 +622,4 @@
   <script src="assets/js/auth.js"></script>
 </body>
 </html>
+
