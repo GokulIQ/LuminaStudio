@@ -621,7 +621,7 @@ function initLoginPage() {
 
   // 7. Dynamic Header Auth State Management ("Welcome, {username}" / "Login" Button)
   function renderHeaderAuthState() {
-    const headerActions = document.querySelector('.site-header .d-flex.align-items-center.gap-2');
+    const headerActions = document.querySelector('.site-header .ms-auto');
     if (!headerActions) return;
 
     let authSlot = document.getElementById('luminaHeaderAuthSlot');

@@ -215,7 +215,7 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: var(--font-heading);
   color: var(--text-primary);
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.2;
   letter-spacing: -0.025em;
 }
@@ -521,11 +521,16 @@ img {
   background: transparent;
   transition: padding 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
   margin: 0;
-}
+
+  height: 62px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;}
 
 .site-header.scrolled {
   padding: 0.35rem 0;
-}
+
+  /* padding removed to preserve 62px height */}
 
 .header-glass-container {
   background: var(--bg-surface-glass);
@@ -537,7 +542,8 @@ img {
   box-shadow: var(--shadow-glass);
   transition: var(--transition);
   min-height: 54px;
-}
+
+  min-height: 54px;}
 
 .site-header.scrolled .header-glass-container {
   box-shadow: var(--shadow-lg);
@@ -1332,8 +1338,10 @@ body.dark-mode.about-page .btn-outline-dark {
 .before-after-container {
   position: relative;
   width: 100%;
-  height: 480px;
-  max-height: 70vh;
+  max-width: 550px;
+  margin: 0 auto;
+  height: 650px;
+  max-height: 80vh;
   overflow: hidden;
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-xl);
@@ -1350,15 +1358,16 @@ body.dark-mode.about-page .btn-outline-dark {
   height: 100%;
   object-fit: cover;
   pointer-events: none;
-}
+
+  object-position: center 20%;}
 
 .before-img-wrapper {
   position: absolute;
   top: 0;
   left: 0;
-  width: 50%;
+  width: 100% !important;
   height: 100%;
-  overflow: hidden;
+  clip-path: inset(0 50% 0 0);
   z-index: 2;
 }
 
@@ -1370,6 +1379,7 @@ body.dark-mode.about-page .btn-outline-dark {
   height: 100%;
   max-width: none;
   object-fit: cover;
+  object-position: center 20%;
 }
 
 .slider-handle {
@@ -1566,7 +1576,6 @@ body.dark-mode.about-page .btn-outline-dark {
 .pricing-card.featured {
   border: 2px solid var(--primary);
   box-shadow: 0 0 35px var(--primary-glow);
-  transform: scale(1.04);
   z-index: 2;
 }
 
@@ -2388,7 +2397,7 @@ body:not(.aos-init) [data-aos] {
   }
 
   .before-after-container {
-    height: 320px;
+    height: 500px;
   }
 
   .pricing-card {
@@ -2436,7 +2445,7 @@ body:not(.aos-init) [data-aos] {
   }
 
   .before-after-container {
-    height: 270px;
+    height: 400px;
   }
 }
 /* ==========================================
@@ -2565,4 +2574,121 @@ html[dir="rtl"] .fa-arrow-right-to-bracket {
     .rtl-toggle-btn span {
         display: none;
     }
+}
+
+/* ==========================================
+   1024px RESPONSIVE HEADER & MEGA MENU FIXES
+========================================== */
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Shrink nav links to prevent overlap */
+  .site-header .navbar-nav .nav-link {
+    padding-left: 0.35rem !important;
+    padding-right: 0.35rem !important;
+    font-size: 0.85rem !important;
+  }
+  
+  /* Shrink logo slightly */
+  .site-header .brand-logo span {
+    font-size: 1.1rem !important;
+  }
+  
+  /* Shrink right side action buttons gap */
+  .site-header .gap-2 {
+    gap: 0.25rem !important;
+  }
+  .site-header .btn {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    font-size: 0.8rem !important;
+  }
+  
+  /* Reduce container paddings */
+  .header-glass-container {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+  .site-header nav.navbar.px-lg-4 {
+    padding-left: 0.25rem !important;
+    padding-right: 0.25rem !important;
+  }
+  
+  /* Make Mega Menu fit without overflowing screen */
+  .mega-menu-container {
+    width: 740px !important;
+    padding: 1rem 1.25rem !important;
+    /* Optional: Center it relative to the viewport instead of the nav item */
+    /* position: fixed !important;
+       left: 50% !important;
+       transform: translateX(-50%) !important;
+       top: 70px !important; */
+  }
+  
+  .mega-menu-container .mega-service-item {
+    padding: 0.5rem 0.75rem !important;
+    gap: 0.75rem !important;
+  }
+  
+  .mega-menu-container .mega-service-icon {
+    font-size: 1.25rem !important;
+  }
+  
+  /* For 'Services' and 'Explore' to not push off-screen, just ensure the width is small enough to fit. */
+}
+
+
+/* Make Mega Menu center relative to the entire header, not just the squeezed navbar */
+.site-header nav.navbar {
+  position: static !important;
+}
+.header-glass-container {
+  position: relative !important;
+}
+
+@media (min-width: 992px) {
+  .mega-menu-container {
+    width: 900px !important;
+    max-width: calc(100vw - 40px) !important;
+    /* This perfectly centers the mega menu inside the header container */
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .mega-menu-container {
+    width: 800px !important;
+    padding: 1rem 1.25rem !important;
+  }
+}
+
+/* ==========================================
+   DROPDOWN HOVER & MOBILE RESPONSIVENESS FIX
+========================================== */
+
+/* 1. Desktop: Open dropdown on hover automatically */
+@media (min-width: 992px) {
+  .site-header .dropdown:hover > .dropdown-menu {
+    display: block;
+    animation: dropdownFade 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+}
+
+/* 2. Mobile: Neutralize 'start-50 translate-middle-x' for mega menu and fix dropdown flow */
+@media (max-width: 991.98px) {
+  .site-header .dropdown-menu {
+    position: static !important;
+    transform: none !important;
+    left: 0 !important;
+    right: auto !important;
+    margin-top: 0 !important;
+    width: 100% !important;
+    box-shadow: none !important;
+    border: none !important;
+    background: transparent !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  .mega-menu-container {
+    padding: 0 !important;
+  }
 }

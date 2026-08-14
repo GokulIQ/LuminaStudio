@@ -77,7 +77,7 @@
       <div class="header-glass-container d-flex align-items-center justify-content-between flex-nowrap">
         
         <!-- Brand Logo -->
-        <a href="index.html" class="brand-logo text-decoration-none flex-shrink-0">
+        <a href="index.html" class="brand-logo text-decoration-none flex-shrink-0 d-flex align-items-center gap-2">
           <div class="brand-icon">
             <i class="fa-solid fa-camera-retro"></i>
           </div>
@@ -101,8 +101,8 @@
             </li>
             
             <!-- Mega Menu: Services -->
-            <li class="nav-item dropdown position-static">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <li class="nav-item dropdown position-static dropdown-hover">
+              <a class="nav-link dropdown-toggle" href="services.html" role="button" data-bs-toggle="dropdown" aria-expanded="false" onclick="window.location.href='services.html'">
                 Services
               </a>
               <div class="dropdown-menu dropdown-menu-glass mega-menu-container start-50 translate-middle-x">
@@ -153,7 +153,7 @@
               <a class="nav-link" href="pricing.html">Pricing</a>
             </li>
             
-            <li class="nav-item dropdown position-static">
+            <li class="nav-item dropdown position-static dropdown-hover">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Explore
               </a>
@@ -218,7 +218,7 @@
         </nav>
 
         <!-- Header Actions -->
-        <div class="d-flex align-items-center gap-2 flex-nowrap flex-shrink-0">
+        <div class="d-flex align-items-center gap-2 flex-nowrap flex-shrink-0 ms-auto">
           <!-- Theme Switcher -->
           <button type="button" class="btn btn-sm btn-glass theme-toggle-btn" title="Toggle Dark/Light Mode" aria-label="Toggle Theme">
             <i class="fa-solid fa-moon"></i>
@@ -230,10 +230,7 @@
           </button>
 
           <!-- Dynamic Auth Slot (Login/Register or Profile Dropdown) -->
-          <a href="login.html" id="luminaHeaderLoginBtn" class="btn btn-sm btn-glass d-none d-sm-inline-flex align-items-center gap-2">
-            <i class="fa-solid fa-right-to-bracket"></i>
-            <span>Login</span>
-          </a>
+ 
 
           <!-- Book Appointment Modal Trigger -->
           <!-- <button type="button" class="btn btn-sm btn-primary-gradient btn-shimmer d-none d-sm-inline-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#bookingWizardModal">
@@ -277,7 +274,7 @@
             </div>
             <!-- Floating Badge -->
             <div class="position-absolute bottom-0 end-0 me-4 mb-4 glass-card p-3 rounded-4 shadow-lg d-flex align-items-center gap-3" data-aos="fade-up" data-aos-delay="200" style="background: var(--bg-surface-glass); backdrop-filter: blur(20px);">
-              <div class="icon-circle bg-warning text-white flex-shrink-0" style="width: 50px; height: 50px;">
+              <div class="icon-circle bg-warning text-white d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle" style="width: 50px; height: 50px;">
                 <i class="fa-solid fa-award fs-5"></i>
               </div>
               <div>
@@ -299,10 +296,12 @@
               <div class="col-md-6">
                 <div class="card h-100 border-0 shadow-sm rounded-4 bg-surface">
                   <div class="card-body p-4">
-                    <div class="icon-circle bg-primary bg-opacity-10 text-primary mb-3" style="width: 50px; height: 50px;">
-                      <i class="fa-solid fa-eye"></i>
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                      <div class="icon-circle bg-primary bg-opacity-10 text-primary d-flex align-items-center justify-content-center flex-shrink-0" style="width: 50px; height: 50px; border-radius: 50%;">
+                        <i class="fa-solid fa-eye"></i>
+                      </div>
+                      <h5 class="fw-bold text-primary mb-0">Our Vision</h5>
                     </div>
-                    <h5 class="fw-bold text-primary mb-3">Our Vision</h5>
                     <p class="text-muted mb-0">To set the global benchmark for certified biometric imaging and fine art studio portraiture.</p>
                   </div>
                 </div>
@@ -310,10 +309,12 @@
               <div class="col-md-6">
                 <div class="card h-100 border-0 shadow-sm rounded-4 bg-surface">
                   <div class="card-body p-4">
-                    <div class="icon-circle bg-secondary bg-opacity-10 text-secondary mb-3" style="width: 50px; height: 50px;">
-                      <i class="fa-solid fa-heart"></i>
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                      <div class="icon-circle bg-secondary bg-opacity-10 text-secondary d-flex align-items-center justify-content-center flex-shrink-0" style="width: 50px; height: 50px; border-radius: 50%;">
+                        <i class="fa-solid fa-heart"></i>
+                      </div>
+                      <h5 class="fw-bold text-primary mb-0">Our Mission</h5>
                     </div>
-                    <h5 class="fw-bold text-primary mb-3">Our Mission</h5>
                     <p class="text-muted mb-0">Empowering individuals and leaders with confidence through pristine, enduring imagery.</p>
                   </div>
                 </div>
@@ -453,8 +454,8 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="py-5 mb-5">
-      <div class="container pb-4">
+    <section class="py-5">
+      <div class="container">
         <div class="bg-surface rounded-5 p-5 text-center shadow-lg border">
           <h2 class="display-5 fw-bold mb-3">Visit Our Flagship Studio</h2>
           <p class="lead text-muted mx-auto mb-4" style="max-width: 600px;">Experience our master lighting setups and enjoy complimentary espresso during your shoot.</p>
@@ -462,7 +463,7 @@
             <a href="contact.html" class="btn btn-primary-gradient px-4 py-3 rounded-pill fw-bold">
               <i class="fa-solid fa-location-dot me-2"></i> Get Studio Directions
             </a>
-            <a href="services.html" class="btn btn-outline-dark px-4 py-3 rounded-pill fw-bold bg-white">
+            <a href="services.html" class="btn btn-outline-dark px-4 py-3 rounded-pill fw-bold">
               View Services
             </a>
           </div>
@@ -480,7 +481,7 @@
         
         <!-- Brand Info -->
         <div class="col-lg-4">
-          <a href="index.html" class="brand-logo text-decoration-none flex-shrink-0">
+          <a href="index.html" class="brand-logo text-decoration-none flex-shrink-0 d-flex align-items-center gap-2">
             <div class="brand-icon"><i class="fa-solid fa-camera-retro"></i></div>
             <span>Lumina<span class="accent">Studio</span></span>
           </a>
@@ -604,10 +605,7 @@
       </ul>
      <div class="mt-4 pt-3 border-top border-secondary border-opacity-10 d-grid gap-2">
         <div class="d-flex gap-2"><a href="login.html" class="btn btn-sm btn-glass text-center flex-grow-1"><i class="fa-solid fa-right-to-bracket me-2"></i> Login</a><a href="register.html" class="btn btn-sm btn-primary-gradient btn-shimmer text-center flex-grow-1"><i class="fa-solid fa-user-plus me-2"></i> Sign Up</a></div>
-         <a href="login.html" id="luminaHeaderLoginBtn" class="btn btn-sm btn-glass d-none d-sm-inline-flex align-items-center gap-2">
-            <i class="fa-solid fa-right-to-bracket"></i>
-            <span>Login</span>
-        </a>
+         
         <!-- <button type="button" class="btn btn-sm btn-primary-gradient text-center" data-bs-toggle="modal" data-bs-target="#bookingWizardModal" data-bs-dismiss="offcanvas"><i class="fa-regular fa-calendar-check me-2"></i> Book Studio Session</button> -->
       </div>
     </div>

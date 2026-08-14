@@ -215,7 +215,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (pos > 1) pos = 1;
       const percentage = pos * 100;
 
-      beforeWrapper.style.width = `${percentage}%`;
+      beforeWrapper.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
       handle.style.left = `${percentage}%`;
     }
 

@@ -102,7 +102,7 @@
       <div class="header-glass-container d-flex align-items-center justify-content-between flex-nowrap">
         
         <!-- Brand Logo -->
-        <a href="index.html" class="brand-logo text-decoration-none flex-shrink-0">
+        <a href="index.html" class="brand-logo text-decoration-none flex-shrink-0 d-flex align-items-center gap-2">
           <div class="brand-icon">
             <i class="fa-solid fa-camera-retro"></i>
           </div>
@@ -126,8 +126,8 @@
             </li>
             
             <!-- Mega Menu: Services -->
-            <li class="nav-item dropdown position-static">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <li class="nav-item dropdown position-static dropdown-hover">
+              <a class="nav-link dropdown-toggle" href="services.html" role="button" data-bs-toggle="dropdown" aria-expanded="false" onclick="window.location.href='services.html'">
                 Services
               </a>
               <div class="dropdown-menu dropdown-menu-glass mega-menu-container start-50 translate-middle-x">
@@ -178,7 +178,7 @@
               <a class="nav-link" href="pricing.html">Pricing</a>
             </li>
             
-            <li class="nav-item dropdown position-static">
+            <li class="nav-item dropdown position-static dropdown-hover">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Explore
               </a>
@@ -243,7 +243,7 @@
         </nav>
 
         <!-- Header Actions -->
-        <div class="d-flex align-items-center gap-2 flex-nowrap flex-shrink-0">
+        <div class="d-flex align-items-center gap-2 flex-nowrap flex-shrink-0 ms-auto">
           <!-- Theme Switcher -->
           <button type="button" class="btn btn-sm btn-glass theme-toggle-btn" title="Toggle Dark/Light Mode" aria-label="Toggle Theme">
             <i class="fa-solid fa-moon"></i>
@@ -255,10 +255,7 @@
           </button>
 
           <!-- Login Link -->
-          <a href="login.html" id="luminaHeaderLoginBtn" class="btn btn-sm btn-glass d-none d-sm-inline-flex align-items-center gap-2">
-            <i class="fa-solid fa-right-to-bracket"></i>
-            <span>Login</span>
-          </a>
+ 
 
           <!-- Dynamic Auth Slot (Login/Register or Profile Dropdown) -->
           <!-- <div id="luminaHeaderAuthSlot" class="d-inline-flex align-items-center">
@@ -349,7 +346,7 @@
             <div class="glass-card floating-stat-card stat-card-1 text-start">
               <div class="d-flex align-items-center gap-3">
                 <div class="spec-badge-icon" style="width: 44px; height: 44px; border-radius: 12px; background: var(--success-light); color: var(--success); display: flex; align-items: center; justify-content: center; font-size: 1.25rem;">
-                  <i class="fa-solid fa-shield-check"></i>
+                  <i class="fa-solid fa-shield-halved"></i>
                 </div>
                 <div>
                   <div class="fw-bold text-primary">Biometric Validated</div>
@@ -374,6 +371,32 @@
           </div>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       STATS SECTION
+       ========================================================================== -->
+  <section class="py-4 border-top border-bottom border-secondary border-opacity-10 bg-white">
+    <div class="container">
+      <div class="row text-center g-4">
+        <div class="col-6 col-md-3">
+          <h3 class="text-primary fw-bold mb-1" style="font-size: 2.25rem;">15,420+</h3>
+          <small class="text-muted text-uppercase fw-semibold" style="letter-spacing: 1px; font-size: 0.75rem;">Sessions Completed</small>
+        </div>
+        <div class="col-6 col-md-3">
+          <h3 class="text-success fw-bold mb-1" style="font-size: 2.25rem;">99.9%</h3>
+          <small class="text-muted text-uppercase fw-semibold" style="letter-spacing: 1px; font-size: 0.75rem;">Visa Acceptance Rate</small>
+        </div>
+        <div class="col-6 col-md-3">
+          <h3 class="text-secondary fw-bold mb-1" style="font-size: 2.25rem;">18+</h3>
+          <small class="text-muted text-uppercase fw-semibold" style="letter-spacing: 1px; font-size: 0.75rem;">Photography Awards</small>
+        </div>
+        <div class="col-6 col-md-3">
+          <h3 class="text-dark fw-bold mb-1" style="font-size: 2.25rem;">12</h3>
+          <small class="text-muted text-uppercase fw-semibold" style="letter-spacing: 1px; font-size: 0.75rem;">Master Artists</small>
+        </div>
       </div>
     </div>
   </section>
@@ -452,7 +475,7 @@
 
           <div class="col-lg-5 text-center">
             <div class="p-3 glass-card bg-surface-elevated position-relative d-inline-block">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80" alt="Passport Biometric Spec Sample" class="rounded-4" style="width: 280px; height: 320px; object-fit: cover; border: 2px dashed var(--primary);">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80" alt="Passport Biometric Spec Sample" class="rounded-4 w-100" style="max-width: 360px; height: 420px; object-fit: cover; border: 2px dashed var(--primary);">
               <div class="position-absolute top-0 start-0 m-4 px-2 py-1 bg-dark bg-opacity-75 text-white rounded small">Biometric Grid Verified</div>
             </div>
           </div>
@@ -763,7 +786,7 @@
   <!-- ==========================================================================
        ANIMATED STATS & METRICS
        ========================================================================== -->
-  <section class="py-5 stats-counter-section">
+  <!-- <section class="py-5 stats-counter-section">
     <div class="container">
       <div class="glass-card p-4 p-md-5">
         <div class="row g-4 text-center">
@@ -791,7 +814,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- ==========================================================================
        HOW IT WORKS / BOOKING PROCESS
@@ -1121,7 +1144,7 @@
         
         <!-- Brand Info -->
         <div class="col-lg-4">
-          <a href="index.html" class="brand-logo text-decoration-none flex-shrink-0">
+          <a href="index.html" class="brand-logo text-decoration-none flex-shrink-0 d-flex align-items-center gap-2">
             <div class="brand-icon"><i class="fa-solid fa-camera-retro"></i></div>
             <span>Lumina<span class="accent">Studio</span></span>
           </a>
@@ -1432,10 +1455,7 @@
       </ul>
      <div class="mt-4 pt-3 border-top border-secondary border-opacity-10 d-grid gap-2">
         <div class="d-flex gap-2"><a href="login.html" class="btn btn-sm btn-glass text-center flex-grow-1"><i class="fa-solid fa-right-to-bracket me-2"></i> Login</a><a href="register.html" class="btn btn-sm btn-primary-gradient btn-shimmer text-center flex-grow-1"><i class="fa-solid fa-user-plus me-2"></i> Sign Up</a></div>
-         <a href="login.html" id="luminaHeaderLoginBtn" class="btn btn-sm btn-glass d-none d-sm-inline-flex align-items-center gap-2">
-            <i class="fa-solid fa-right-to-bracket"></i>
-            <span>Login</span>
-        </a>
+         
         <!-- <button type="button" class="btn btn-sm btn-primary-gradient text-center" data-bs-toggle="modal" data-bs-target="#bookingWizardModal" data-bs-dismiss="offcanvas"><i class="fa-regular fa-calendar-check me-2"></i> Book Studio Session</button> -->
       </div>
     </div>
