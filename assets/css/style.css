@@ -1571,6 +1571,7 @@ body.dark-mode.about-page .btn-outline-dark {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: visible;
 }
 
 .pricing-card.featured {
@@ -1581,8 +1582,9 @@ body.dark-mode.about-page .btn-outline-dark {
 
 .pricing-ribbon {
   position: absolute;
-  top: 1.25rem;
-  right: 1.25rem;
+  top: 0;
+  right: 1.5rem;
+  transform: translateY(-50%);
   background: var(--gradient-primary);
   color: #fff;
   font-size: 0.75rem;

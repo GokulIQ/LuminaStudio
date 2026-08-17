@@ -160,5 +160,5 @@
 /* Pricing Ribbon in RTL */
 [dir="rtl"] .pricing-ribbon {
   right: auto;
-  left: 1.25rem;
+  left: 1.5rem;
 }
