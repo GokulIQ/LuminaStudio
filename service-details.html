@@ -56,7 +56,54 @@
           <ul class="navbar-nav align-items-center">
             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-            <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+            <!-- Mega Menu: Services -->
+            <li class="nav-item dropdown position-static dropdown-hover">
+              <a class="nav-link dropdown-toggle active" href="services.html" role="button" data-bs-toggle="dropdown" aria-expanded="false" onclick="window.location.href='services.html'">
+                Services
+              </a>
+              <div class="dropdown-menu dropdown-menu-glass mega-menu-container start-50 translate-middle-x">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <h6 class="fw-bold text-primary mb-3"><i class="fa-solid fa-passport me-2"></i>Biometric & Official</h6>
+                    <a href="service-details.html" class="mega-service-item text-decoration-none text-reset">
+                      <div class="mega-service-icon"><i class="fa-solid fa-id-card"></i></div>
+                      <div>
+                        <div class="fw-bold text-primary">Passport & Visa Photos</div>
+                        <small class="text-muted">US, UK, Schengen & 100+ countries with biometric compliance guarantee.</small>
+                      </div>
+                    </a>
+                    <a href="service-portrait.html" class="mega-service-item text-decoration-none text-reset mt-2">
+                      <div class="mega-service-icon"><i class="fa-solid fa-user-tie"></i></div>
+                      <div>
+                        <div class="fw-bold text-primary">Executive Headshots</div>
+                        <small class="text-muted">High-impact portraits for LinkedIn, speaking, and corporate leadership.</small>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-6">
+                    <h6 class="fw-bold text-secondary mb-3"><i class="fa-solid fa-film me-2"></i>Creative & Events</h6>
+                    <a href="service-wedding.html" class="mega-service-item text-decoration-none text-reset">
+                      <div class="mega-service-icon" style="background: var(--gradient-amber);"><i class="fa-solid fa-ring"></i></div>
+                      <div>
+                        <div class="fw-bold text-primary">Wedding & Engagements</div>
+                        <small class="text-muted">Cinematic love stories captured with natural emotion and master optics.</small>
+                      </div>
+                    </a>
+                    <a href="service-fashion.html" class="mega-service-item text-decoration-none text-reset mt-2">
+                      <div class="mega-service-icon" style="background: var(--gradient-accent);"><i class="fa-solid fa-shirt"></i></div>
+                      <div>
+                        <div class="fw-bold text-primary">Fashion & Commercial</div>
+                        <small class="text-muted">Editorial lookbooks and e-commerce campaigns for leading brands.</small>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="mt-3 pt-3 border-top border-secondary border-opacity-10 d-flex justify-content-between align-items-center">
+                  <span class="small text-muted"><i class="fa-solid fa-bolt text-warning me-1"></i> 30-Minute Instant Turnaround on all ID & Passport Photos</span>
+                  <a href="services.html" class="btn btn-sm btn-outline-glow">View All 12 Services <i class="fa-solid fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </li>
             <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
             <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
             <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
@@ -68,13 +115,13 @@
 
           <!-- Dynamic Auth Slot (Login/Register or Profile Dropdown) -->
           <div id="luminaHeaderAuthSlot" class="d-inline-flex align-items-center">
-            <a href="login.html" class="btn btn-sm btn-glass d-none d-sm-inline-flex align-items-center gap-2">
+            <a href="login.html" class="btn btn-sm btn-glass d-none d-lg-inline-flex align-items-center gap-2">
               <i class="fa-solid fa-arrow-right-to-bracket"></i>
               <span>Login</span>
             </a>
           </div>
 
-<button type="button" class="btn btn-sm btn-primary-gradient btn-shimmer d-none d-sm-inline-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#bookingWizardModal"> <i class="fa-regular fa-calendar-check"></i> <span>Book Session</span> </button>
+<button type="button" class="btn btn-sm btn-primary-gradient btn-shimmer d-none d-lg-inline-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#bookingWizardModal"> <i class="fa-regular fa-calendar-check"></i> <span>Book Session</span> </button>
           <button class="btn btn-sm btn-glass d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenuOffcanvas" aria-label="Open Mobile Menu"><i class="fa-solid fa-bars"></i></button>
         </div>
       </div>

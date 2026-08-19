@@ -41,13 +41,7 @@ const newMenuStr = `<li class="nav-item dropdown position-static">
                         <small class="text-muted">Find quick answers to common studio questions.</small>
                       </div>
                     </a>
-                    <a href="login.html" class="mega-service-item text-decoration-none text-reset mt-2">
-                      <div class="mega-service-icon" style="background: var(--gradient-accent);"><i class="fa-solid fa-right-to-bracket"></i></div>
-                      <div>
-                        <div class="fw-bold text-primary">Client Portal</div>
-                        <small class="text-muted">Login or register to manage your photo sessions.</small>
-                      </div>
-                    </a>
+                    
                     <a href="404.html" class="mega-service-item text-decoration-none text-reset mt-2">
                       <div class="mega-service-icon" style="background: linear-gradient(135deg, #64748b, #475569);"><i class="fa-solid fa-gear"></i></div>
                       <div>

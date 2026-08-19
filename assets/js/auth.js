@@ -666,11 +666,20 @@ function initLoginPage() {
         </div>
       `;
     } else {
-      authSlot.innerHTML = `
-     <a href="register.html" class="btn btn-sm btn-primary-gradient btn-shimmer d-none d-sm-inline-flex align-items-center gap-2" style="border-radius: var(--radius-full); padding: 0.4rem 0.95rem; font-weight: 600; font-size: 0.84rem;">
-      <i class="fa-solid fa-user-plus"></i> <span>Sign Up</span>
-     </a>
-      `;
+      const isContactPage = window.location.pathname.includes('contact.html');
+      if (isContactPage) {
+        authSlot.innerHTML = `
+         <a href="login.html" class="btn btn-sm btn-glass d-none d-lg-inline-flex align-items-center gap-2" style="border-radius: var(--radius-full); padding: 0.4rem 0.95rem; font-weight: 600; font-size: 0.84rem;">
+          <i class="fa-solid fa-arrow-right-to-bracket"></i> <span>Login</span>
+         </a>
+        `;
+      } else {
+        authSlot.innerHTML = `
+         <a href="register.html" class="btn btn-sm btn-primary-gradient btn-shimmer d-none d-lg-inline-flex align-items-center gap-2" style="border-radius: var(--radius-full); padding: 0.4rem 0.95rem; font-weight: 600; font-size: 0.84rem;">
+          <i class="fa-solid fa-user-plus"></i> <span>Sign Up</span>
+         </a>
+        `;
+      }
     }
 
 // Target ALL login buttons (Desktop header, Mobile menu, and duplicates)
